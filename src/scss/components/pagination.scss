@@ -1,0 +1,57 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 700;
+
+    a,
+    span {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #1b1b1b;
+    }
+
+    li.active {
+      span {
+        color: $black;
+        background-color: $accent;
+      }
+    }
+  }
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  display: none;
+
+  &--show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+}
+
+.arrow__icon {
+  width: 6px;
+  height: 12px;
+}
