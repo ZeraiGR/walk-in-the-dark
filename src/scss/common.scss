@@ -1,4 +1,4 @@
-// Заголовки, общие БЄМ блоки и проче...
+// Button
 
 .button {
   padding: 16px 48px;
@@ -40,5 +40,51 @@
 
   &--s {
     font-size: 12px;
+  }
+}
+
+// Title
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Mont', sans-serif;
+  font-weight: 900;
+
+  &--litle-20,
+  &--litle-24 {
+    text-transform: initial;
+    font-weight: 700;
+  }
+
+  &--litle-20 {
+    font-size: 20px;
+  }
+
+  &--litle-24 {
+    font-size: 24px;
+  }
+
+  &--h1 {
+    font-size: 48px;
+  }
+
+  &--h2 {
+    font-size: 40px;
+  }
+
+  &--h3 {
+    font-size: 36px;
+  }
+
+  &--h4 {
+    font-size: 30px;
+  }
+
+  &--h5 {
+    font-size: 24px;
+  }
+
+  &--h6 {
+    font-size: 18px;
   }
 }
