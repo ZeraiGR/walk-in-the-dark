@@ -92,4 +92,19 @@
 // detail
 
 .detail {
+  display: inline-block;
+  padding-right: 34px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 10px;
+  background-image: url('@img/icons/arrow-detail.svg');
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  &--accent {
+    color: $accent;
+    background-image: url('@img/icons/arrow-detail-accent.svg');
+  }
 }
