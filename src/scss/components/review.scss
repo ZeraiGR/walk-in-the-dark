@@ -1,0 +1,89 @@
+.review {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background-color: $blackLight;
+  border-radius: 16px;
+}
+
+.review__top {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .mini-rating__icon {
+    width: 18px;
+    height: 18px;
+    fill: $greyLight;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li.active {
+    .mini-rating__icon {
+      fill: $accent;
+    }
+  }
+}
+
+.review__title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.5;
+  @include cut-text(2);
+}
+
+.review__text {
+  margin-bottom: 30px;
+  height: 160px;
+  line-height: 1.5;
+  @include cut-text(6);
+}
+
+.review__date {
+  margin-top: auto;
+  font-size: 14px;
+  color: $greyThin;
+}
+
+// user
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user__avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user__info,
+.user__name {
+  display: block;
+}
+
+.user__name {
+  margin-bottom: 2px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.user__location {
+  font-size: 12px;
+  color: $greyThin;
+}
