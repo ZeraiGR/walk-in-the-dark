@@ -84,7 +84,7 @@ flsForms.formFieldsInit();
 // flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
-// flsForms.formMasks();
+flsForms.formMasks();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();

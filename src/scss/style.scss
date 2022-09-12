@@ -18,6 +18,7 @@ $fontSize: rem(18);
 
 // Основные цвета
 $white: #ffffff;
+$whiteBold: #a8a8a8;
 $accent: #ffb50d;
 $accentHover: #ffd600;
 $black: #000000;
@@ -155,6 +156,7 @@ body {
 @import 'components/menu';
 @import 'components/socials';
 @import 'components/payment';
+@import 'components/field';
 
 // Подключение стилей отдельных блоков
 @import 'header';

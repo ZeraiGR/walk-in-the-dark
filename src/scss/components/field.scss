@@ -1,0 +1,70 @@
+.form {
+  max-width: 25%;
+  margin: 0 auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  &--agreement {
+  }
+}
+
+.field__label {
+  margin-bottom: 6px;
+  display: block;
+  font-size: 16px;
+
+  span {
+    color: $red;
+  }
+}
+
+.field__input,
+.field__textarea {
+  padding: 11px 16px;
+  border: 1px solid $grey;
+  background-color: $blackLight;
+  border-radius: 2px;
+  color: $white;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &::placeholder {
+    color: $whiteBold;
+  }
+
+  &:focus {
+    border-color: $accent;
+    outline: transparent;
+  }
+}
+
+.field__textarea {
+  resize: vertical;
+}
+
+.form__error {
+  margin-top: 6px;
+  color: $red;
+  font-size: 14px;
+}
+
+.field__checkbox {
+}
+
+.checkbox {
+}
+
+.checkbox__input {
+}
+
+.checkbox__label {
+}
+
+.checkbox__text {
+}
+
+.form__label {
+}
