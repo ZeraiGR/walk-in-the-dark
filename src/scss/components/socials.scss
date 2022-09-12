@@ -16,6 +16,13 @@
 }
 
 .socials__icon {
+  fill: $whiteBold;
+  transition: fill 0.3s ease;
+
+  &:hover {
+    fill: $accent;
+  }
+
   &--facebook {
     width: 10px;
     height: 18px;
