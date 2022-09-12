@@ -1,0 +1,43 @@
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials__link {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--big {
+    width: 36px;
+  }
+}
+
+.socials__icon {
+  &--facebook {
+    width: 10px;
+    height: 18px;
+  }
+
+  &--vk {
+    width: 24px;
+    height: 14px;
+  }
+
+  &--advisor {
+    width: 36px;
+    height: 23px;
+  }
+
+  &--insta {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--youtube {
+    width: 24px;
+    height: 17px;
+  }
+}

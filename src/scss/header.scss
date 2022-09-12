@@ -52,67 +52,20 @@
 
 .header {
   .header__link {
-    position: relative;
     display: block;
     font-size: 14px;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $accent;
-    }
-
-    &--address,
-    &--phone {
-      &::before {
-        position: absolute;
-        display: block;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-repeat: no-repeat;
-        content: '';
-      }
-    }
 
     &--location {
       margin-right: auto;
-      padding-right: 23px;
-
-      &::after {
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 5px;
-        content: '';
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-repeat: no-repeat;
-        background-image: url('@img/icons/more.svg');
-      }
     }
 
     &--address {
-      padding-left: 28px;
       margin-right: 10px;
-
-      &::before {
-        width: 15px;
-        height: 20px;
-        background-image: url('@img/icons/location.svg');
-      }
     }
 
     &--phone {
-      padding-left: 36px;
       font-size: 16px;
       line-height: 1.5;
-
-      &::before {
-        width: 20px;
-        height: 20px;
-        background-image: url('@img/icons/phone.svg');
-      }
     }
 
     &--callback {
@@ -156,4 +109,8 @@
 }
 
 .header__menu {
+}
+
+.header__support {
+  padding: 12px 32px;
 }
