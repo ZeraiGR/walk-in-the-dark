@@ -1,35 +1,101 @@
 <header class="header">
-	<div class="header__container">
-		<button class="button button--l button--ghost" type="button">
-			Забронировать экскурсию
-		</button>
-		<button class="button button--m" type="button">
-			Забронировать экскурсию
-		</button>
-
-		<h1 class="title title--h1">
-			Закрой глаза и посмотри
-		</h1>
-
-		<span class="detail">Подробнее</span>
-		<span class="detail detail--accent">Подробнее</span>
-
-		<ul class="tags">
-			<li>
-				<a class="tag" href="#">
-					Новости музея
+	<div class="header__top">
+		<div class="header__container">
+			<div class="header__content">
+				<a class="header__link header__link--location" href="#">
+					Нижний Новгород
 				</a>
-			</li>
 
-			<li>
-				<a class="tag" href="#">
-					Актуальное
+				<a class="header__link header__link--address" href="#">
+					Москва, ул. Арбат, д.17
 				</a>
-			</li>
-		</ul>
 
-		@@include('components/_pagination.htm', {})
-		@@include('components/_review.htm', {})
-		@@include('components/_product.htm', {})
+				<a class="header__link header__link--phone" href="#">
+					8 (495) 044-54-55
+				</a>
+
+				<a class="header__link header__link--callback" href="#">
+					Заказать обратный звонок
+				</a>
+
+				<a class="button button--ghost" href="#">поддержать проект</a>
+
+				<select name="lang" class="header__lang">
+					<option value="ru" selected>ru</option>
+					<option value="en" data-href="#">en</option>
+					<option value="es" data-href="#">es</option>
+					<option value="de" data-href="#">de</option>
+					<option value="fr" data-href="#">fr</option>
+					<option value="it" data-href="#">it</option>
+					<option value="zh" data-href="#">zh</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__bottom">
+		<div class="header__container">
+			<nav class="header__nav">
+				<a class="header__logo" href="#">
+					<img src="@img/icons/logo.svg" alt="logo">
+				</a>
+
+				<ul class="header__menu menu">
+					<li>
+						<a href="#">
+							Продукты
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Франчайзинг
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Для школ
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Групповое посещение
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Стоимость и бронирование
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							О музее
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Статьи
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Медиа
+						</a>
+					</li>
+
+					<li>
+						<a href="#">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 </header>

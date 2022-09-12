@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  gap: 23px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  a {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}

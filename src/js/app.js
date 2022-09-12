@@ -78,7 +78,7 @@ flsFunctions.isWebp();
 import * as flsForms from './files/forms/forms.js';
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
 // flsForms.formSubmit(true);
@@ -96,7 +96,7 @@ import * as flsForms from './files/forms/forms.js';
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-//flsForms.formSelect();
+flsForms.formSelect();
 
 // Модуль работы с ползунком  ===================================================================================================================================================================================================================================================================================
 /*
