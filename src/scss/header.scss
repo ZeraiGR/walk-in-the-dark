@@ -216,6 +216,7 @@
 
   @media (max-width: em(430)) {
     top: 59px;
+    height: calc(100% - 59px);
   }
 }
 
