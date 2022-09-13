@@ -1,0 +1,46 @@
+.form {
+  &--landing {
+    .form__img {
+      max-width: 543px;
+      width: 100%;
+    }
+  }
+
+  .field {
+    margin-bottom: 16px;
+
+    &--agreement {
+      margin-bottom: 40px;
+    }
+  }
+
+  .field__checkbox {
+    max-height: 20px;
+  }
+}
+
+.form__img {
+  object-fit: cover;
+}
+
+.form__content {
+  display: flex;
+  border-radius: 16px;
+  background-color: $blackLight;
+  overflow: hidden;
+}
+
+.form__info {
+  padding: 60px 70px;
+}
+
+.form__title {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.form__descr {
+  margin-bottom: 40px;
+  display: block;
+  line-height: 1.5;
+}

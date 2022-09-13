@@ -1,0 +1,45 @@
+<form class="form form--landing">
+	<div class="form__container">
+		<div class="form__content">
+			<img class="form__img" src="@img/decor/form-bg-1.jpg" alt="form">
+
+			<div class="form__info">
+				<h2 class="form__title title title--h4">
+					Если у вас остались вопросы, заполните форму
+				</h2>
+
+				<span class="form__descr">
+					И мы вам с радостью перезвоним в течении 10-ти минут
+				</span>
+
+				<div class="field">
+					<label class="field__label" for="user-name">Имя <span>*</span></label>
+					<input class="field__input" id="user-name" name="user-name" type="text" placeholder="Введите ваше имя"
+						required data-validate data-required data-error="Это поле необходимо заполнить">
+				</div>
+
+				<div class="field">
+					<label class="field__label" for="user-phone">Телефон <span>*</span></label>
+					<input class="field__input tel" id="user-phone" name="user-phone" type="tel" placeholder="+7(___)___-__-__"
+						required data-validate data-required data-error="Введен не верный телефон" minlength="10">
+				</div>
+
+				<div class="field field--agreement">
+					<div class="field__checkbox checkbox">
+						<input id="agreement" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="agreement"
+							required>
+						<label for="agreement" class="checkbox__label">
+							<span class="checkbox__text">
+								Я принимаю <a href="#">условия обработки персональных данных</a>
+							</span>
+						</label>
+					</div>
+				</div>
+
+				<button class="button button--l" type="submit">
+					перезвоните мне
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
