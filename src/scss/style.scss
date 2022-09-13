@@ -165,6 +165,10 @@ body {
 @import 'components/payment';
 @import 'components/field';
 @import 'components/breadcrumbs';
+@import 'components/card';
+
+//
+@import 'sections/promo';
 
 // Подключение стилей отдельных блоков
 @import 'header';

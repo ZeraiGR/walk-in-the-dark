@@ -1,0 +1,149 @@
+.promo {
+  &--main {
+    padding: 50px 0 120px;
+  }
+
+  &--landing {
+    padding: 80px 0 120px;
+
+    .promo__info {
+      margin-bottom: 0;
+      max-width: 720px;
+    }
+  }
+}
+
+.promo__container {
+  background-position: top right;
+  background-size: 45%;
+  background-repeat: no-repeat;
+}
+
+.promo__title {
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.promo__content {
+  display: flex;
+  align-items: center;
+}
+
+.promo__info {
+  margin-bottom: 50px;
+}
+
+// Monda
+.promo__subtitle {
+  margin-bottom: 24px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.promo__list {
+  margin-bottom: 24px;
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 20px;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: $accent;
+      border-radius: 50%;
+    }
+  }
+}
+
+.promo__img {
+  max-width: 480px;
+}
+
+.promo__recommend {
+  position: relative;
+  margin-left: 54px;
+  padding-left: 54px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  background-image: url('@img/decor/tripadvisor.png');
+  background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-65%);
+    left: -108px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url('@img/decor/promo-arrow.svg');
+    background-repeat: no-repeat;
+    content: '';
+  }
+}
+
+.promo__descr {
+  margin-bottom: 40px;
+  display: block;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.promo__button {
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.promo__cards {
+  margin: 0 auto;
+  max-width: 915px;
+  display: flex;
+  gap: 30px;
+}
+
+.promo__card {
+  max-width: 285px;
+  width: 100%;
+  padding: 32px 24px;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.promo__icon {
+  margin-bottom: 16px;
+
+  &--eye {
+    width: 48px;
+    height: 33px;
+  }
+
+  &--socials {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--mind {
+    width: 30px;
+    height: 40px;
+  }
+}
