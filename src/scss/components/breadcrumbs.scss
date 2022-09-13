@@ -1,0 +1,72 @@
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 1.4;
+
+  ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  li:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::after {
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background-size: 6px 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('@img/icons/next.svg');
+    }
+
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+  }
+
+  a {
+    color: $greyLight;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  span {
+    color: $whiteBold;
+
+    @media (max-width: $mobileSmall) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: $mobileSmall) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.breadcrumbs__backlink {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+
+  @media (max-width: $mobileSmall) {
+    display: flex;
+  }
+}
+
+.breadcrumbs__icon {
+  width: 4px;
+  height: 8px;
+  fill: $greyLight;
+}
