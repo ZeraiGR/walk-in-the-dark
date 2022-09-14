@@ -1,0 +1,56 @@
+<section class="slider">
+	<div class="slider__container">
+
+		<h2 class="slider__title title title--h2">
+			продукты
+		</h2>
+
+		<div class="products__slider">
+			<ul class="products__swiper">
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-1.jpg", "title": "Экскурсия",
+					"descr": "5 привычных локаций, в непривычных условиях за 60 минут"})
+				</li>
+
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-2.jpg", "title": "Свидание", "descr":
+					"Организуем незабываемое свидание в полной темноте по цене похода в ресторан"})
+				</li>
+
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-3.jpg", "title": "квесты", "descr":
+					"Незабываемые эмоции от прохождения необычных квестов"})
+				</li>
+
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-1.jpg", "title": "Экскурсия",
+					"descr": "5 привычных локаций, в непривычных условиях за 60 минут"})
+				</li>
+
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-2.jpg", "title": "Свидание", "descr":
+					"Организуем незабываемое свидание в полной темноте по цене похода в ресторан"})
+				</li>
+
+				<li class="products__slide">
+					@@include('../components/_product.htm', {"imgUrl": "img/products/product-3.jpg", "title": "квесты", "descr":
+					"Незабываемые эмоции от прохождения необычных квестов"})
+				</li>
+			</ul>
+
+			<div class="products__pagination slider__pagination"></div>
+		</div>
+
+		<div class="products__prev slider__prev">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+
+		<div class="products__next slider__next">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+	</div>
+</section>
