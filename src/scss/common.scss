@@ -42,6 +42,32 @@
   }
 }
 
+.sound-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &.active {
+    .sound-button__enable {
+      display: none;
+    }
+
+    .sound-button__disable {
+      display: block;
+    }
+  }
+}
+
+.sound-button__disable {
+  display: none;
+}
+
+.sound-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
 // Title
 
 .title {
@@ -53,6 +79,7 @@
   &--litle-24 {
     text-transform: initial;
     font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   &--litle-20 {

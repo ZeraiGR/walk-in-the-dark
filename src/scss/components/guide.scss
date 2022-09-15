@@ -1,0 +1,141 @@
+.guide {
+  display: flex;
+  gap: 40px;
+  padding: 48px 64px 52px;
+
+  @media (max-width: em(1280)) {
+    padding: 48px;
+  }
+
+  @media (max-width: em(768)) {
+    flex-direction: column;
+    padding: 32px;
+    gap: 30px;
+  }
+
+  @media (max-width: em(630)) {
+    padding: 32px 20px;
+  }
+}
+
+.guide__promo {
+  width: 280px;
+  flex: none;
+
+  @media (max-width: em(768)) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  @media (max-width: em(630)) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.guide__avatar {
+  margin-bottom: 32px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  @media (max-width: em(768)) {
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.guide__button {
+  width: 100%;
+
+  @media (max-width: em(768)) {
+    max-width: 283px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: 100%;
+    padding: 16px 32px;
+  }
+}
+
+.guide__title {
+  margin-bottom: 32px;
+
+  @media (max-width: em(768)) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+.guide__subtitle {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @media (max-width: em(1280)) {
+    font-size: 16px;
+  }
+
+  @media (max-width: em(768)) {
+    font-size: 14px;
+  }
+}
+
+.guide__text {
+  margin-bottom: 24px;
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (max-width: em(768)) {
+    font-size: 14px;
+  }
+}
+
+.guide__quote {
+  position: relative;
+  padding-top: 51px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 48px;
+    height: 35px;
+    background-image: url('@img/icons/quote.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+
+    @media (max-width: $mobileSmall) {
+      width: 40px;
+      height: 29px;
+    }
+  }
+
+  @media (max-width: em(768)) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding-top: 35px;
+  }
+}

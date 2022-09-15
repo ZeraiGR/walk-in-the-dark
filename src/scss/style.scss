@@ -166,11 +166,14 @@ body {
 @import 'components/field';
 @import 'components/breadcrumbs';
 @import 'components/card';
+@import 'components/guide';
 
 //
 @import 'sections/promo';
 @import 'sections/form';
+@import 'sections/section';
 @import 'sections/news';
+@import 'sections/guides';
 @import 'sections/slider';
 
 // Подключение стилей отдельных блоков
