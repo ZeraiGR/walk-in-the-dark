@@ -1,0 +1,81 @@
+.faq {
+  &--single {
+    padding: 20px 0 120px;
+
+    @media (max-width: em(1280)) {
+      padding: 20px 0 96px;
+    }
+
+    @media (max-width: em(768)) {
+      padding: 20px 0 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: 15px 0 60px;
+    }
+  }
+}
+
+.spollers {
+}
+
+.faq__list {
+  .faq__item._active,
+  .faq__item._before {
+    border-color: transparent;
+  }
+}
+
+.spollers__item {
+}
+
+.faq__item {
+  padding: 24px 30px 8px;
+  border-bottom: 1px solid $greyLight;
+
+  @media (max-width: em(768)) {
+    padding: 24px 20px 8px;
+  }
+
+  &._active {
+    padding: 24px 30px;
+    background-color: $blackLight;
+    border-color: transparent;
+    border-radius: 16px;
+
+    @media (max-width: em(768)) {
+      padding: 24px 20px;
+    }
+  }
+}
+
+.spollers__title {
+  width: 100%;
+  margin-bottom: 16px;
+  padding-right: 40px;
+  min-height: 32px;
+  text-align: left;
+  background-image: url('@img/icons/spoller-open.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px;
+  line-height: 1.5;
+
+  &._spoller-active {
+    background-image: url('@img/icons/spoller-close.svg');
+  }
+
+  @media (max-width: em(768)) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 16px;
+  }
+}
+
+.spollers__body {
+  @media (max-width: $mobileSmall) {
+    font-size: 14px;
+  }
+}

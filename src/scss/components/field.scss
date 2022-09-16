@@ -14,13 +14,17 @@
   span {
     color: $red;
   }
+
+  @media (max-width: em(768)) {
+    font-size: 14px;
+  }
 }
 
 .field__input,
 .field__textarea {
   padding: 11px 16px;
-  border: 1px solid $grey;
-  background-color: $blackLight;
+  border: 1px solid #4f4f4f;
+  background-color: $grey;
   border-radius: 2px;
   color: $white;
   font-size: 16px;
@@ -38,6 +42,11 @@
 
 .field__textarea {
   resize: vertical;
+  min-height: 165px;
+
+  @media (max-width: em(768)) {
+    min-height: 106px;
+  }
 }
 
 .form__error {
@@ -46,20 +55,10 @@
   font-size: 14px;
 }
 
-.field__checkbox {
-}
-
-.checkbox {
-}
-
-.checkbox__input {
-}
-
-.checkbox__label {
-}
-
 .checkbox__text {
-}
+  line-height: 1.5;
 
-.form__label {
+  @media (max-width: em(768)) {
+    font-size: 12px;
+  }
 }
