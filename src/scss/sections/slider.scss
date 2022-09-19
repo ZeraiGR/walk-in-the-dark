@@ -1,3 +1,21 @@
+.slider {
+  &--products {
+    margin-bottom: 115px;
+
+    @media (max-width: em(1280)) {
+      margin-bottom: 95px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
 .slider__container {
   position: relative;
 
