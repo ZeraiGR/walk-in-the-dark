@@ -92,10 +92,26 @@
 
   &--h1 {
     font-size: 48px;
+
+    @media (max-width: em(1280)) {
+      font-size: 36px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 30px;
+    }
   }
 
   &--h2 {
     font-size: 40px;
+
+    @media (max-width: em(1280)) {
+      font-size: 36px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
   }
 
   &--h3 {
