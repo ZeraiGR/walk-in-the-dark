@@ -99,17 +99,8 @@
 }
 
 .info__btn {
-  position: absolute;
   left: 32px;
   bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: $accent;
-  cursor: pointer;
 
   @media (max-width: em(972)) {
     left: 40px;
@@ -120,11 +111,6 @@
     left: 20px;
     bottom: 20px;
   }
-}
-
-.info__btn-icon {
-  width: 20px;
-  height: 18px;
 }
 
 .info__descr {

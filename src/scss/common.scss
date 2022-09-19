@@ -228,3 +228,22 @@
 .logo {
   display: block;
 }
+
+// play-btn
+
+.play-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: $accent;
+  cursor: pointer;
+}
+
+.play-btn__icon {
+  width: 20px;
+  height: 18px;
+}
