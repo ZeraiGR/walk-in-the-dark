@@ -1,0 +1,172 @@
+.info {
+  &--main {
+    margin-bottom: 95px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.info__container {
+  @media (max-width: em(972)) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 20px;
+  }
+}
+
+.info__title {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (max-width: em(1280)) {
+    font-size: 36px;
+  }
+
+  @media (max-width: em(972)) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 24px;
+  }
+}
+
+.info__content {
+  display: flex;
+  gap: 60px;
+
+  @media (max-width: em(1280)) {
+    gap: 40px;
+  }
+
+  @media (max-width: em(972)) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.info__text {
+  font-size: 20px;
+  line-height: 1.5;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: em(1280)) {
+    font-size: 16px;
+  }
+
+  @media (max-width: em(972)) {
+    font-size: 14px;
+  }
+}
+
+.info__video {
+  position: relative;
+  margin-bottom: 24px;
+  display: block;
+  box-shadow: 0 16px 40px 0 #bbb6b626;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+
+    @media (max-width: em(972)) {
+      width: 100%;
+      height: 420px;
+    }
+
+    @media (max-width: $mobile) {
+      height: 300px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      height: 200px;
+    }
+  }
+}
+
+.info__btn {
+  position: absolute;
+  left: 32px;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: $accent;
+  cursor: pointer;
+
+  @media (max-width: em(972)) {
+    left: 40px;
+    bottom: 32px;
+  }
+
+  @media (max-width: $mobile) {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+.info__btn-icon {
+  width: 20px;
+  height: 18px;
+}
+
+.info__descr {
+  position: relative;
+  margin-left: 52px;
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+
+  strong {
+    color: $accent;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-65%);
+    left: -108px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url('@img/decor/promo-arrow.svg');
+    background-repeat: no-repeat;
+    content: '';
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  @media (max-width: em(1280)) {
+    font-size: 15px;
+  }
+
+  @media (max-width: em(972)) {
+    margin-left: 69px;
+  }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
