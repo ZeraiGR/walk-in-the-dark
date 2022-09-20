@@ -38,6 +38,7 @@
   @media (max-width: em(630)) {
     justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -55,7 +56,6 @@
   @media (max-width: em(630)) {
     gap: 20px;
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -80,7 +80,6 @@
 
   @media (max-width: em(630)) {
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -98,10 +97,7 @@
   }
 
   @media (max-width: em(630)) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    display: none;
   }
 }
 
@@ -154,8 +150,59 @@
   }
 
   @media (max-width: em(630)) {
-    justify-content: center;
     gap: 12px;
+  }
+}
+
+.footer__mobile-menu {
+  display: none;
+
+  @media (max-width: em(630)) {
+    display: block;
+  }
+}
+
+.footer__spoller {
+  position: relative;
+  margin-bottom: 0;
+  padding-right: 0;
+  background-image: none;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    display: block;
+    width: 10px;
+    height: 5px;
+    background-image: url('@img/icons/angle-bottom.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &._spoller-active {
+    background-image: none;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 14px;
+  }
+}
+
+.footer__mobile-item {
+  padding: 13px 0;
+  border-top: 1px solid $grey;
+
+  &:last-child {
+    border-bottom: 1px solid $grey;
+  }
+
+  .footer__list {
+    margin-top: 20px;
   }
 }
 
