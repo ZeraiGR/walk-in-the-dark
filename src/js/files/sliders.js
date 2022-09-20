@@ -175,6 +175,45 @@ function initSliders() {
       },
       on: {},
     });
+
+    new Swiper('.news__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+      /*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+      observer: true,
+      observeParents: true,
+      spaceBetween: 27,
+      speed: 800,
+      slidesPerView: 3,
+      // centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      navigation: {
+        nextEl: '.news__next',
+        prevEl: '.news__prev',
+      },
+      // Arrows
+      breakpoints: {
+        320: {
+          spaceBetween: 16,
+          slidesPerView: 'auto',
+        },
+        880: {
+          spaceBetween: 20,
+        },
+      },
+      on: {},
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
