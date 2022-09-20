@@ -131,10 +131,10 @@
   }
 }
 
-.header__top {
-}
-
 .header__container {
+  @media (max-width: em(1280)) {
+    max-width: 100%;
+  }
 }
 
 .header__content {

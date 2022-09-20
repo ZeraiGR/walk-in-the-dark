@@ -182,10 +182,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     content: '';
+    transition: transform 0.3s ease;
   }
 
   &._spoller-active {
     background-image: none;
+
+    &::after {
+      transform: rotate(180deg) translateY(10%);
+    }
   }
 
   @media (max-width: $mobileSmall) {

@@ -38,6 +38,30 @@
     }
   }
 
+  &--corporate {
+    margin-bottom: 100px;
+
+    @media (max-width: em(1280)) {
+      margin-bottom: 95px;
+    }
+
+    @media (max-width: em(972)) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 60px;
+
+      .form__info {
+        padding: 30px 20px;
+      }
+
+      .form__img {
+        height: 220px;
+      }
+    }
+  }
+
   .field {
     margin-bottom: 16px;
 
@@ -52,6 +76,10 @@
 
   .field__checkbox {
     max-height: 20px;
+
+    @media (max-width: $mobile) {
+      max-height: initial;
+    }
   }
 }
 
@@ -129,6 +157,7 @@
 
 .form__button {
   @media (max-width: $mobileSmall) {
+    padding: 16px 32px;
     font-size: 12px;
   }
 }

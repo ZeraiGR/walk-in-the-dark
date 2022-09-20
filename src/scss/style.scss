@@ -122,6 +122,10 @@ body {
     @if ($containerPadding>0) {
       padding: 0 rem(math.div($containerPadding, 2));
     }
+
+    @media (max-width: em(1280)) {
+      max-width: rem(945);
+    }
   }
 } @else {
   // По брейк-поинтам
@@ -135,6 +139,7 @@ body {
         padding: 0 rem(math.div($containerPadding, 2));
       }
     }
+
     @media (max-width: $pc) {
       max-width: rem(970);
     }
