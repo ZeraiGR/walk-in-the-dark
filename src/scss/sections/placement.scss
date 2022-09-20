@@ -1,0 +1,184 @@
+.placement {
+  position: relative;
+  padding: 32px 0;
+  background-image: url('@img/decor/map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: em(1100)) {
+    padding: 32px 0 425px;
+    background-image: url('@img/decor/map-middle.jpg');
+  }
+
+  @media (max-width: em(500)) {
+    padding: 0 0 295px;
+    background-size: 100% 450px;
+    background-position: bottom;
+  }
+}
+
+.placement__info {
+  padding: 40px;
+  max-width: 475px;
+  background-color: $blackLight;
+  border-radius: 16px;
+
+  @media (max-width: $mobile) {
+    padding: 32px 24px;
+  }
+}
+
+.placement__title {
+  margin-bottom: 30px;
+  line-height: 1.5;
+
+  @media (max-width: em(500)) {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.placement__navigation {
+  margin-bottom: 20px;
+}
+
+.placement__item {
+  position: relative;
+  padding-left: 40px;
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    display: block;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &--location {
+    &::before {
+      top: 4px;
+      width: 18px;
+      height: 24px;
+      background-image: url('@img/icons/location.svg');
+    }
+  }
+
+  &--worktime {
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      background-image: url('@img/icons/worktime.svg');
+    }
+  }
+
+  &--shop {
+    &::before {
+      top: 5px;
+      width: 24px;
+      height: 22.5px;
+      background-image: url('@img/icons/shop.svg');
+    }
+  }
+
+  @media (max-width: em(500)) {
+    font-size: 16px;
+  }
+}
+
+.placement__marker {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &--arbat {
+    top: 57%;
+    left: 44%;
+
+    @media (max-width: em(1100)) {
+      top: 58%;
+      left: 25%;
+    }
+
+    @media (max-width: em(500)) {
+      top: 66%;
+      left: 13%;
+    }
+  }
+
+  &--reviera {
+    top: 38%;
+    left: 49%;
+
+    @media (max-width: em(1100)) {
+      top: 85%;
+      left: 55%;
+    }
+
+    @media (max-width: $mobile) {
+      top: 70%;
+      left: 45%;
+    }
+
+    @media (max-width: em(500)) {
+      margin-right: 15px;
+      top: 65%;
+      left: 38%;
+    }
+  }
+}
+
+.placement__caption {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 8px 16px;
+  background-color: $blackLight;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.placement__open {
+  max-width: max-content;
+}
+
+.placement__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.placement__close-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.placement__location-icon {
+  width: 33px;
+  height: 44px;
+}

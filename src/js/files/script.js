@@ -28,8 +28,6 @@ const soundBtnsHandler = () => {
   });
 };
 
-soundBtnsHandler();
-
 const subtabsHandler = () => {
   const btns = document.querySelectorAll('.subtabs__btn');
 
@@ -55,4 +53,29 @@ const subtabsHandler = () => {
   });
 };
 
+const placementMarkersHandler = () => {
+  const closeBtns = document.querySelectorAll('.placement__close'),
+    openBtns = document.querySelectorAll('.placement__open');
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget;
+      const caps = target.closest('.placement__marker').querySelector('.placement__caption');
+
+      caps.classList.add('show');
+    });
+  });
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget;
+      const caps = target.closest('.placement__marker').querySelector('.placement__caption');
+
+      caps.classList.remove('show');
+    });
+  });
+};
+
+soundBtnsHandler();
 subtabsHandler();
+placementMarkersHandler();
