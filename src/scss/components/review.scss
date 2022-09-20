@@ -4,6 +4,10 @@
   flex-direction: column;
   background-color: $blackLight;
   border-radius: 16px;
+
+  @media (max-width: $mobileSmall) {
+    padding: 24px 20px;
+  }
 }
 
 .review__top {
@@ -11,6 +15,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 .mini-rating {
@@ -42,6 +53,14 @@
   font-size: 20px;
   line-height: 1.5;
   @include cut-text(2);
+
+  @media (max-width: em(1280)) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
 }
 
 .review__text {
@@ -49,6 +68,14 @@
   height: 160px;
   line-height: 1.5;
   @include cut-text(6);
+
+  @media (max-width: em(1280)) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
 }
 
 .review__date {
@@ -81,6 +108,10 @@
   margin-bottom: 2px;
   font-size: 20px;
   line-height: 1.5;
+
+  @media (max-width: $mobileSmall) {
+    font-size: 16px;
+  }
 }
 
 .user__location {

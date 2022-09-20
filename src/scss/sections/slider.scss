@@ -73,7 +73,7 @@
 }
 
 .slider__prev {
-  left: -110px;
+  left: -90px;
   transform: rotate(180deg) translateY(-10%);
 
   @media (max-width: em(1500)) {
@@ -82,7 +82,7 @@
 }
 
 .slider__next {
-  right: -110px;
+  right: -90px;
 
   @media (max-width: em(1500)) {
     right: -70px;

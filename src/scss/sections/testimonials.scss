@@ -1,0 +1,100 @@
+.testimonials {
+  margin: 120px 0 110px;
+
+  @media (max-width: em(1280)) {
+    margin: 95px 0;
+  }
+
+  @media (max-width: em(768)) {
+    margin: 0 0 80px;
+  }
+}
+
+.testimonials__container {
+  position: relative;
+
+  @media (max-width: em(1500)) {
+    max-width: 940px;
+  }
+}
+
+.testimonials__title {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (max-width: em(1280)) {
+    margin-bottom: 20px;
+  }
+}
+
+.testimonials__subtitle {
+  position: relative;
+  margin: 0 auto 40px;
+  padding-left: 53px;
+  display: block;
+  max-width: max-content;
+  color: $accent;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: block;
+    width: 43px;
+    height: 38px;
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('@img/decor/tripadvisor.png');
+    content: '';
+  }
+
+  @media (max-width: em(768)) {
+    margin-bottom: 30px;
+  }
+}
+
+.testimonials__slider {
+  margin-bottom: 40px;
+
+  @media (max-width: em(768)) {
+    margin-bottom: 30px;
+  }
+}
+
+.testimonials__swiper {
+  margin-bottom: 40px;
+
+  @media (max-width: em(768)) {
+    margin-bottom: 30px;
+  }
+}
+
+.testimonials__slide {
+  @media (max-width: em(880)) {
+    max-width: 620px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 400px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: 280px;
+  }
+}
+
+.testimonials__button {
+  margin: 0 auto;
+  display: block;
+  max-width: max-content;
+
+  @media (max-width: $mobileSmall) {
+    padding: 16px 32px;
+    font-size: 12px;
+  }
+}

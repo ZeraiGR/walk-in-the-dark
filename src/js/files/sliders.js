@@ -131,6 +131,50 @@ function initSliders() {
       },
       on: {},
     });
+
+    new Swiper('.testimonials__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Pagination, Navigation],
+      /*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+      observer: true,
+      observeParents: true,
+      spaceBetween: 20,
+      speed: 800,
+      slidesPerView: 2,
+      // centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.testimonials__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.testimonials__next',
+        prevEl: '.testimonials__prev',
+      },
+      // Arrows
+      breakpoints: {
+        320: {
+          spaceBetween: 16,
+          slidesPerView: 'auto',
+        },
+        880: {
+          spaceBetween: 20,
+        },
+      },
+      on: {},
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)

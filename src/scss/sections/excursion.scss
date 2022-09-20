@@ -74,6 +74,8 @@
       @media (max-width: em(972)) {
         padding: 224px 0 304px;
         background-image: url('@img/decor/excursion-light-mobile.jpg');
+        background-size: cover;
+        background-position: center;
       }
 
       @media (max-width: $mobileSmall) {
