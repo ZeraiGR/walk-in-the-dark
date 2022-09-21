@@ -14,6 +14,34 @@
       margin-bottom: 60px;
     }
   }
+
+  &--similar {
+    margin-bottom: 120px;
+
+    @media (max-width: em(1280)) {
+      margin-bottom: 95px;
+    }
+
+    @media (max-width: em(768)) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 60px;
+    }
+
+    .news__slider {
+      margin-bottom: 0;
+    }
+
+    .news__swiper {
+      margin-bottom: 40px;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 .news__container {
@@ -21,6 +49,289 @@
 
   @media (max-width: em(1500)) {
     max-width: 945px;
+  }
+}
+
+.news__top {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  .news__title {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: em(768)) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+.news__main {
+  display: flex;
+  gap: 60px;
+
+  @media (max-width: em(1280)) {
+    gap: 42px;
+    flex-direction: column-reverse;
+  }
+}
+
+.news__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: em(1280)) {
+    flex-direction: row;
+  }
+}
+
+.news__date {
+  font-size: 16px;
+}
+
+.news__socials-item {
+  a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $blackLight;
+
+    &:hover {
+      .news__socials-icon {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.news__content {
+  max-width: 995px;
+  line-height: 1.5;
+
+  .gallery {
+    margin: 40px 0;
+    display: grid;
+    gap: 30px;
+
+    &--2 {
+      grid-template-columns: repeat(2, 1fr);
+
+      img {
+        height: 340px;
+
+        @media (max-width: em(768)) {
+          height: 280px;
+        }
+      }
+    }
+
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
+
+      img {
+        height: 240px;
+
+        @media (max-width: em(768)) {
+          height: 200px;
+        }
+      }
+    }
+
+    img {
+      margin-top: 0;
+      margin-bottom: 16px;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    figcaption {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @media (max-width: em(630)) {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: em(630)) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 80px 0 30px;
+    font-size: 36px;
+
+    @media (max-width: em(768)) {
+      font-size: 30px;
+    }
+
+    @media (max-width: em(630)) {
+      margin: 60px 0 30px;
+      font-size: 24px;
+    }
+  }
+
+  h3 {
+    margin: 70px 0 30px;
+    font-size: 30px;
+
+    @media (max-width: em(768)) {
+      font-size: 24px;
+    }
+
+    @media (max-width: em(630)) {
+      margin: 50px 0 30px;
+      font-size: 18px;
+    }
+  }
+
+  h4 {
+    margin: 60px 0 20px;
+    font-size: 24px;
+
+    @media (max-width: em(630)) {
+      font-size: 18px;
+    }
+  }
+
+  h5,
+  h6 {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
+  ul {
+    margin: 20px 0 40px;
+
+    li {
+      position: relative;
+      margin: 16px 0;
+      padding-left: 24px;
+
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $accent;
+        content: '';
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &.adv {
+      li {
+        padding-left: 48px;
+
+        &::before {
+          top: 0;
+          left: 0;
+          width: 32px;
+          height: 32px;
+          background-color: transparent;
+          background-image: url('@img/icons/done.svg');
+        }
+
+        @media (max-width: em(768)) {
+          padding-left: 44px;
+        }
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+
+    &.strong {
+      font-size: 20px;
+
+      @media (max-width: em(768)) {
+        font-size: 18px;
+      }
+
+      @media (max-width: em(630)) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  img {
+    margin: 40px 0;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+
+    @media (max-width: em(768)) {
+      height: 340px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin: 30px 0;
+      height: 240px;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    margin: 30px 0;
+    padding: 32px 48px;
+    font-style: italic;
+    background-color: $blackLight;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: 6px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: $accent;
+      content: '';
+    }
+
+    @media (max-width: em(768)) {
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: em(768)) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 14px;
   }
 }
 
@@ -75,5 +386,77 @@
   @media (max-width: $mobileSmall) {
     padding: 16px 32px;
     font-size: 12px;
+  }
+}
+
+.news__socials-icon {
+  fill: $whiteBold;
+  transition: fill 0.3s ease;
+
+  &--vk {
+    width: 24px;
+    height: 14px;
+  }
+
+  &--insta {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--twitter {
+    width: 20px;
+    height: 16px;
+  }
+
+  &--facebook {
+    width: 13px;
+    height: 20px;
+  }
+
+  &--ok {
+    width: 13px;
+    height: 23px;
+  }
+}
+
+.news__link {
+  position: relative;
+  display: block;
+}
+
+.news__btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backlink {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 34px;
+  display: block;
+  font-size: 14px;
+  color: $accent;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration 0.3s ease;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%) rotate(-90deg);
+    background-image: url('@img/icons/arrow-detail-accent.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    content: '';
+  }
+
+  &:hover {
+    text-decoration-color: $accent;
   }
 }

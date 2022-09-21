@@ -179,7 +179,7 @@ function initSliders() {
     new Swiper('.news__slider', {
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Pagination],
       /*
 			effect: 'fade',
 			autoplay: {
@@ -201,6 +201,10 @@ function initSliders() {
       navigation: {
         nextEl: '.news__next',
         prevEl: '.news__prev',
+      },
+      pagination: {
+        el: '.news__pagination',
+        clickable: true,
       },
       // Arrows
       breakpoints: {
