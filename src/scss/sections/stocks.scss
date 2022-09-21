@@ -1,0 +1,10 @@
+.stocks__list {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+}
