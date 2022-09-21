@@ -16,6 +16,27 @@
     background-size: 100% 450px;
     background-position: bottom;
   }
+
+  &--contacts {
+    margin-bottom: 120px;
+    padding: 20px 0 0;
+    background-image: none;
+
+    .breadcrumbs {
+      margin-bottom: 40px;
+    }
+
+    .placement__info {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.placement__content {
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
 }
 
 .placement__info {
@@ -27,6 +48,14 @@
   @media (max-width: $mobile) {
     padding: 32px 24px;
   }
+}
+
+.placement__map {
+  width: 100%;
+  background-image: url('@img/decor/contacts-map.jpg');
+  background-size: cover;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .placement__title {
@@ -66,6 +95,26 @@
       width: 18px;
       height: 24px;
       background-image: url('@img/icons/location.svg');
+    }
+  }
+
+  &--phone {
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-image: url('@img/icons/phone.svg');
+    }
+  }
+
+  &--mail {
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 15px;
+      background-image: url('@img/icons/mail.svg');
     }
   }
 
@@ -181,4 +230,57 @@
 .placement__location-icon {
   width: 33px;
   height: 44px;
+}
+
+.placement__list {
+  display: flex;
+  gap: 30px;
+}
+
+.placement__part {
+  width: 100%;
+  padding: 30px;
+  background-color: $blackLight;
+  border-radius: 16px;
+}
+
+.placement__item-title {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.placement__item-decor {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placement__item-icon {
+  &--speaker {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--multimedia {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.placement__name {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-family: 'Mont', sans-serif;
+}
+
+.placement__socials {
 }
