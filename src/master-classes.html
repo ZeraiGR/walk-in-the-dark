@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Мастер-классы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<h1 class="sr-only">Контакты</h1>
+			@@include('html/sections/_placement--contacts.htm',{})
+			@@include('html/sections/_find.htm',{})
+			@@include('html/sections/_form--contacts.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
