@@ -1,23 +1,80 @@
 .find {
+  margin-bottom: 120px;
+  text-align: center;
+  line-height: 1.5;
+
+  @media (max-width: em(1280)) {
+    margin-bottom: 95px;
+  }
+
+  @media (max-width: em(768)) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 60px;
+  }
 }
 
 .find__title {
+  margin-bottom: 20px;
 }
 
 .find__descr {
+  margin-bottom: 40px;
+  font-size: 16px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 14px;
+  }
 }
 
 .find__list {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
 }
 
 .find__item {
+  max-width: calc(33% - 20px);
+  padding: 32px 24px;
+  background-color: $blackLight;
+  border-radius: 16px;
+
+  @media (max-width: $mobile) {
+    padding: 32px 20px;
+    max-width: 100%;
+  }
 }
 
 .find__item-icon {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
 }
 
 .find__heading {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: 'Mont', sans-serif;
 }
 
 .find__text {
+  font-size: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: em(1280)) {
+    font-size: 14px;
+  }
 }
