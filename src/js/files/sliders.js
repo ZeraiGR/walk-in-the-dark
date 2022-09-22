@@ -218,6 +218,39 @@ function initSliders() {
       },
       on: {},
     });
+
+    new Swiper('.partners__slider', {
+      modules: [Pagination],
+      observer: true,
+      observeParents: true,
+      spaceBetween: 30,
+      speed: 800,
+      slidesPerView: 'auto',
+      // centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.partners__pagination',
+        clickable: true,
+      },
+      // Arrows
+      breakpoints: {
+        320: {
+          spaceBetween: 14,
+        },
+        630: {
+          spaceBetween: 24,
+        },
+        1280: {
+          spaceBetween: 30,
+        },
+      },
+      on: {},
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
