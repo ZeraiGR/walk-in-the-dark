@@ -16,4 +16,8 @@
     color: $accent;
     border-color: $accent;
   }
+
+  @media (max-width: $mobileSmall) {
+    padding: 4px;
+  }
 }
