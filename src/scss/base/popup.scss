@@ -26,6 +26,39 @@ body.popup-show::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+
+  &--gallery {
+    padding: 5px;
+
+    .popup__content {
+      max-width: 1200px;
+      padding: 64px 115px;
+      background-color: $blackLight;
+
+      @media (max-width: em(1280)) {
+        max-width: 945px;
+      }
+
+      @media (max-width: em(972)) {
+        padding: 48px 80px;
+      }
+
+      @media (max-width: em(630)) {
+        padding: 40px 14px;
+      }
+    }
+
+    .popup__text {
+      position: relative;
+    }
+
+    .popup__close {
+      @media (max-width: em(630)) {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  }
 }
 
 .popup_show {

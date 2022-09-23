@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Thumbs, EffectFade } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -250,6 +250,57 @@ function initSliders() {
         },
       },
       on: {},
+    });
+
+    const thumbs = new Swiper('.thumbnails__slider', {
+      // modules: [Pagination],
+      observer: true,
+      observeParents: true,
+      spaceBetween: 22,
+      // speed: 800,
+      slidesPerView: 4,
+      // centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      // watchSlidesProgress: true,
+      breakpoints: {
+        320: {
+          spaceBetween: 7,
+        },
+        630: {
+          spaceBetween: 12,
+        },
+        1280: {
+          spaceBetween: 16,
+        },
+      },
+      on: {},
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    new Swiper('.album__slider', {
+      modules: [Thumbs, EffectFade, Navigation],
+      observer: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      observeParents: true,
+      spaceBetween: 10,
+      speed: 800,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.album__next',
+        prevEl: '.album__prev',
+      },
+      thumbs: {
+        swiper: thumbs,
+      },
     });
   }
 }
