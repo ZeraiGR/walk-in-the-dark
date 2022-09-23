@@ -65,7 +65,7 @@ flsFunctions.tabs();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// flsFunctions.initPopups();
+flsFunctions.initPopups();
 
 /*
 Модуль параллакса мышью
