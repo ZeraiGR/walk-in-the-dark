@@ -1,0 +1,95 @@
+.work__list {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  line-height: 1.5;
+}
+
+.work__item {
+  padding: 40px 48px;
+
+  @media (max-width: em(630)) {
+    padding: 30px 20px;
+  }
+}
+
+.work__name {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  @include cut-text(3);
+
+  @media (max-width: em(630)) {
+    font-size: 18px;
+  }
+}
+
+.work__salary {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 55px;
+  font-size: 20px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    content: '';
+    background-size: cover;
+    background-image: url('@img/icons/wallet.svg');
+  }
+
+  @media (max-width: em(630)) {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+}
+
+.work__tags {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: em(630)) {
+    gap: 10px;
+  }
+}
+
+.work__tag {
+  padding: 10px 20px;
+  background-color: $grey;
+  border-radius: 4px;
+  font-size: 14px;
+
+  @media (max-width: em(630)) {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+.work__text {
+  margin-bottom: 30px;
+
+  p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+.work__button {
+  display: block;
+  max-width: max-content;
+
+  @media (max-width: $mobileSmall) {
+    font-size: 12px;
+  }
+}

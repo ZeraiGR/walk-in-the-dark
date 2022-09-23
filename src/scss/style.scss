@@ -172,7 +172,7 @@ body {
 @import 'components/breadcrumbs';
 @import 'components/card';
 @import 'components/guide';
-@import 'components/cards';
+@import 'components/chars';
 @import 'components/stock';
 
 //
@@ -191,6 +191,7 @@ body {
 @import 'sections/stocks';
 @import 'sections/find';
 @import 'sections/timeline';
+@import 'sections/work';
 
 // Подключение стилей отдельных блоков
 @import 'header';
