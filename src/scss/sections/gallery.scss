@@ -1,92 +1,52 @@
 .gallery {
-  &--main {
-    margin-bottom: 120px;
+  .gallery__btn {
+    top: auto;
+    left: 32px;
+    bottom: 32px;
+    transform: translate(0);
 
     @media (max-width: em(1280)) {
-      margin-bottom: 95px;
+      bottom: 24px;
     }
 
-    @media (max-width: em(768)) {
-      margin-bottom: 80px;
-    }
-
-    @media (max-width: $mobileSmall) {
-      margin-bottom: 60px;
+    @media (max-width: $mobile) {
+      width: 64px;
+      height: 64px;
     }
   }
 }
 
-.gallery__title {
-  margin-bottom: 40px;
-  text-align: center;
+.gallery__navigation {
+  margin-bottom: 30px;
+}
 
-  @media (max-width: em(768)) {
+.gallery__list {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @media (max-width: em(972)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $mobile) {
+    gap: 20px;
+  }
+
+  @media (max-width: $mobileSmall) {
     margin-bottom: 30px;
+    grid-template-columns: 100%;
+    gap: 30px;
   }
 }
 
-.gallery__slider {
-  margin-bottom: 40px;
-
-  @media (max-width: em(1280)) {
-    margin-bottom: 30px;
-  }
-}
-
-.gallery__swiper {
-  margin-bottom: 40px;
-}
-
-.gallery__slide {
-  width: 380px;
-  height: 280px;
-  transform: translateX(-85px);
+.gallery__item {
+  width: 100%;
 
   img {
+    max-width: 100%;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    border-radius: 16px;
   }
-
-  @media (max-width: em(1280)) {
-    width: 300px;
-    height: 220px;
-  }
-
-  @media (max-width: em(768)) {
-    width: 213px;
-    height: 157px;
-  }
-}
-
-.gallery__video-slide {
-  height: 100%;
-}
-
-.gallery__video {
-  position: relative;
-  display: block;
-  box-shadow: 0 16px 40px 0 #bbb6b626;
-  border-radius: 16px;
-  height: 100%;
-  overflow: hidden;
-}
-
-.gallery__btn {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  @media (max-width: em(768)) {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.gallery__button {
-  margin: 0 auto;
-  display: block;
-  max-width: max-content;
-  font-size: 14px;
 }

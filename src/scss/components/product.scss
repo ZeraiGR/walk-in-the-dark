@@ -12,8 +12,52 @@
     }
   }
 
-  @media (max-width: em(630)) {
-    // height: initial;
+  &--album {
+    .product__title {
+      margin-bottom: 64px;
+      font-size: 18px;
+    }
+
+    .product__img {
+      @media (max-width: em(1280)) {
+        height: 200px;
+      }
+    }
+  }
+
+  &--video {
+    overflow: visible;
+    background-color: transparent;
+
+    .gallery__video {
+      box-shadow: none;
+      height: auto;
+    }
+
+    .gallery__video-slide {
+      margin-bottom: 24px;
+      height: auto;
+    }
+
+    .product__descr {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1.5;
+      font-family: 'Mont', sans-serif;
+    }
+
+    img {
+      border-radius: 16px;
+
+      @media (max-width: em(1280)) {
+        height: 220px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        height: 220px;
+      }
+    }
   }
 }
 
