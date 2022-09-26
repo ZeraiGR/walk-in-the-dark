@@ -1,0 +1,50 @@
+<section class="news news--landing">
+	<div class="news__container">
+		<h1 class="news__title title title--h2">сми о нашем музее</h1>
+
+		<div class="news__slider">
+			<ul class="news__swiper">
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-1.jpg"})
+				</li>
+
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-2.jpg"})
+				</li>
+
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-3.jpg"})
+				</li>
+
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-4.jpg"})
+				</li>
+
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-5.jpg"})
+				</li>
+
+				<li class="news__slide">
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-6.jpg"})
+				</li>
+
+			</ul>
+
+			<div class="news__pagination slider__pagination"></div>
+		</div>
+
+		<a class="news__button button button--ghost button--l" href="#">смотреть все новости</a>
+
+		<div class="news__prev slider__prev">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+
+		<div class="news__next slider__next">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+	</div>
+</section>

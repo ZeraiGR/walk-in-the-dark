@@ -1,0 +1,46 @@
+<section class="slider slider--guides">
+	<div class="slider__container">
+
+		<h2 class="slider__title title title--h2">
+			познакомьтесь с нашими гидами
+		</h2>
+
+		<div class="guides__slider">
+			<ul class="guides__swiper">
+				<li class="guides__slide">
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-1.png"})
+				</li>
+
+				<li class="guides__slide">
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+				</li>
+
+				<li class="guides__slide">
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-1.png"})
+				</li>
+
+				<li class="guides__slide">
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+				</li>
+
+				<li class="guides__slide">
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+				</li>
+			</ul>
+
+			<div class="guides__pagination slider__pagination"></div>
+		</div>
+
+		<div class="guides__prev slider__prev">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+
+		<div class="guides__next slider__next">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+	</div>
+</section>
