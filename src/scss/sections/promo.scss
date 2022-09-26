@@ -26,9 +26,84 @@
   &--landing {
     padding: 80px 0 120px;
 
+    .promo__content {
+      gap: 20px;
+
+      @media (max-width: em(972)) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @media (max-width: em(630)) {
+        margin-bottom: 0;
+      }
+    }
+
+    .promo__title {
+      max-width: 100%;
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .promo__descr {
+      @media (max-width: em(1280)) {
+        font-size: 20px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 18px;
+      }
+
+      @media (max-width: em(630)) {
+        font-size: 16px;
+      }
+    }
+
     .promo__info {
       margin-bottom: 0;
       max-width: 720px;
+    }
+
+    .promo__recommend {
+      @media (max-width: $mobile) {
+        margin: 0 auto;
+        max-width: max-content;
+      }
+    }
+
+    .promo__img {
+      @media (max-width: em(1280)) {
+        width: 351px;
+        height: 351px;
+      }
+
+      @media (max-width: em(768)) {
+        width: 290px;
+        height: 290px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: em(1280)) {
+      padding: 55px 0 95px;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 50px 0 80px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: 30px 0 60px;
     }
   }
 
@@ -622,6 +697,7 @@
   padding-left: 54px;
   min-height: 38px;
   display: flex;
+  font-size: 14px;
   align-items: center;
   background-image: url('@img/decor/tripadvisor.png');
   background-repeat: no-repeat;
