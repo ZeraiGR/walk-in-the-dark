@@ -76,6 +76,36 @@ const placementMarkersHandler = () => {
   });
 };
 
+const citySearchHandler = () => {
+  const search = document.getElementById('city-search');
+  const cities = document.querySelectorAll('.city__item');
+  const arr = [];
+
+  cities?.forEach((el) => {
+    let city = el.querySelector('a').textContent.trim();
+    arr.push(city);
+  });
+
+  if (search && cities.length > 0) {
+    search.addEventListener('input', (e) => {
+      const request = e.target.value;
+
+      const filteredArr = arr.filter((el) => el.toLowerCase().includes(request.toLowerCase()));
+
+      cities.forEach((el) => {
+        let city = el.querySelector('a').textContent.trim();
+
+        if (!filteredArr.includes(city)) {
+          el.style.display = 'none';
+        } else {
+          el.style.display = 'block';
+        }
+      });
+    });
+  }
+};
+
 soundBtnsHandler();
 subtabsHandler();
 placementMarkersHandler();
+citySearchHandler();

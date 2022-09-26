@@ -59,6 +59,223 @@ body.popup-show::after {
       }
     }
   }
+
+  &--city {
+    padding: 165px 0 0 0;
+    background-color: transparent;
+    transition: none;
+
+    .popup__wrapper {
+      background-color: $black;
+    }
+
+    .popup__close {
+      top: 19px;
+
+      @media (max-width: $mobile) {
+        top: 46px;
+        right: 25px;
+      }
+
+      @media (max-width: em(630)) {
+        top: 37px;
+      }
+    }
+
+    .city__title {
+      margin-bottom: 40px;
+
+      @media (max-width: em(630)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .city__search {
+      position: relative;
+      margin-bottom: 50px;
+      max-width: 690px;
+      width: 100%;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        width: 19px;
+        height: 19px;
+        background-image: url('@img/icons/zoom.svg');
+        content: '';
+      }
+
+      @media (max-width: $mobile) {
+        max-width: 100%;
+      }
+    }
+
+    .city__input {
+      width: 100%;
+      padding: 12px 45px 12px 16px;
+      font-size: 16px;
+      background-color: $grey;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      color: $whiteBold;
+      outline: transparent;
+      transition: border-color 0.3s ease;
+
+      &::placeholder {
+        color: $whiteBold;
+      }
+
+      &:focus {
+        border-color: $accent;
+      }
+    }
+
+    .popup__content {
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    .city__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 35px 120px;
+
+      @media (max-width: em(1280)) {
+        gap: 35px 60px;
+      }
+
+      @media (max-width: em(972)) {
+        gap: 35px;
+      }
+
+      @media (max-width: $mobile) {
+        padding-bottom: 50px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: em(630)) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobileSmall) {
+        grid-template-columns: 100%;
+        gap: 25px;
+      }
+    }
+
+    .city__item {
+      font-size: 20px;
+      line-height: 1.5;
+
+      a {
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+
+      @media (max-width: em(972)) {
+        font-size: 18px;
+      }
+    }
+
+    .popup__container {
+      position: relative;
+
+      @media (max-width: $mobile) {
+        padding-top: 40px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        padding-top: 30px;
+      }
+    }
+
+    @media (max-width: em(1230)) {
+      padding: 105px 0 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 70px 0 0 0;
+    }
+
+    @media (max-width: em(630)) {
+      padding: 60px 0 0 0;
+    }
+  }
+
+  &--check {
+    .popup__content {
+      max-width: max-content;
+      padding: 30px;
+      background-color: $blackLight;
+      line-height: 1.5;
+
+      @media (max-width: $mobileSmall) {
+        padding: 30px 20px;
+      }
+    }
+
+    .check__location {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      font-size: 16px;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 20px;
+        height: 24px;
+        background-image: url('@img/icons/location.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+      }
+
+      @media (max-width: em(630)) {
+        font-size: 14px;
+      }
+    }
+
+    .popup__close {
+      top: 15px;
+      right: 15px;
+    }
+
+    .check__btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .check__button {
+      @media (max-width: em(630)) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        padding: 12px 32px;
+      }
+    }
+
+    .check__choose {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $accent;
+      font-size: 14px;
+
+      @media (max-width: em(630)) {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 .popup_show {

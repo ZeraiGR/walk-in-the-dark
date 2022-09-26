@@ -11,6 +11,16 @@
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 60px;
+
+    &--download {
+      .sources__item {
+        flex-direction: row;
+      }
+
+      .sources__title {
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 
@@ -39,6 +49,10 @@
 .sources__list {
   display: flex;
   gap: 20px;
+
+  li {
+    width: 100%;
+  }
 
   @media (max-width: $mobile) {
     flex-direction: column;

@@ -1,11 +1,184 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
+<div id="city" aria-hidden="true" class="popup popup--city" data-nofade>
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
 			<div class="popup__text">
+				<div class="popup__container">
+					<button data-close type="button" class="popup__close" aria-label="Закрыть"></button>
+					<h2 class="city__title title title--h2">выберите город</h2>
+
+					<form class="city__search">
+						<label class="city__label sr-only" for="city-search">
+							Введите ваш город
+						</label>
+						<input class="city__input" id="city-search" type="text" placeholder="Введите ваш город">
+					</form>
+
+					<ul class="city__list">
+						<li class="city__item">
+							<a href="#">
+								Санкт-Петербург
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Выборг
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Луга
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Петрозаводск
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Москва
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Гатчина
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Магнитогорск
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Псков
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Архангельск
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Йошкар-Ола
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Набережные Челны
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Рязань
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Астрахань
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Калуга
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Нижний Новгород
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Сыктывкар
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Великий Новгород
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Кингисепп
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Нижний Тагил
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Тверь
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Владимир
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Киров
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Орел
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Тула
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Волжский
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#">
+								Липецк
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#1">
+								Первоуральск
+							</a>
+						</li>
+						<li class="city__item">
+							<a href="#che">
+								Чебоксары
+							</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</div>
 </div>
- -->
+
+<div id="city-check" aria-hidden="true" class="popup popup--check">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close" aria-label="Закрыть"></button>
+			<div class="popup__text">
+				<div class="check__location">
+					Ваш город <strong>Нижний Новгород?</strong>
+				</div>
+
+				<div class="check__btns">
+					<button class="check__button button button--l" type="button" data-close>
+						все верно
+					</button>
+
+					<button class="check__choose" type="button" data-popup="#city">выбрать город</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
