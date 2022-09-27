@@ -7,21 +7,26 @@
 		<ul class="process__parts">
 			<li class="process__part card">
 				<img src="@img/products/product-2.jpg" alt="date">
-				<h3 class="process__name">Свидание</h3>
-				<p class="process__descr">
-					Встречаетесь в ресторане или кафе - кушаете
-					цезарь и пьете мохито - разговоры ни о чем
-					и неуместные шутки из comedy club
-				</p>
+				<div class="process__box">
+					<h3 class="process__name">Свидание</h3>
+					<p class="process__descr">
+						Встречаетесь в ресторане или кафе - кушаете
+						цезарь и пьете мохито - разговоры ни о чем
+						и неуместные шутки из comedy club
+					</p>
+				</div>
 			</li>
 
 			<li class="process__part card">
 				<img src="@img/products/product-1.jpg" alt="result">
-				<h3 class="process__name">Результат</h3>
-				<p class="process__descr">
-					Такие свидания обычно быстро заканчиваются
-					и не приносят удовольствия вам, и вашей половине
-				</p>
+
+				<div class="process__box">
+					<h3 class="process__name">Результат</h3>
+					<p class="process__descr">
+						Такие свидания обычно быстро заканчиваются
+						и не приносят удовольствия вам, и вашей половине
+					</p>
+				</div>
 			</li>
 		</ul>
 
@@ -32,10 +37,12 @@
 		<span class="process__subtitle">
 			За 45 минут в темной части вы пройдете 5 локаций
 		</span>
+	</div>
 
+	<div class="process__container slider__container">
 		<div class="process__slider">
 			<ul class="process__swiper">
-				<li class="process__slide">
+				<li class="process__slide card">
 					<img src="@img/decor/location-1.jpg" alt="location 1">
 					<div class="process__info">
 						<h3 class="process__slide-name">Улица</h3>
@@ -47,7 +54,7 @@
 					</div>
 				</li>
 
-				<li class="process__slide">
+				<li class="process__slide card">
 					<img src="@img/decor/location-1.jpg" alt="location 1">
 					<div class="process__info">
 						<h3 class="process__slide-name">Комната</h3>
@@ -59,7 +66,7 @@
 					</div>
 				</li>
 
-				<li class="process__slide">
+				<li class="process__slide card">
 					<img src="@img/decor/location-1.jpg" alt="location 1">
 					<div class="process__info">
 						<h3 class="process__slide-name">Сувенирная лавка</h3>
@@ -71,7 +78,7 @@
 					</div>
 				</li>
 
-				<li class="process__slide">
+				<li class="process__slide card">
 					<img src="@img/decor/location-1.jpg" alt="location 1">
 					<div class="process__info">
 						<h3 class="process__slide-name">Спортивный зал</h3>
@@ -83,8 +90,24 @@
 					</div>
 				</li>
 			</ul>
+
+			<div class="process__pagination slider__pagination"></div>
 		</div>
 
+		<div class="process__prev slider__prev">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+
+		<div class="process__next slider__next">
+			<svg class="slider__icon">
+				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
+			</svg>
+		</div>
+	</div>
+
+	<div class="process__container">
 		<h2 class="process__title title title--h3">
 			За 15 минут в светлой части вы:
 		</h2>
