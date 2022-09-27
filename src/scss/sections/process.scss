@@ -31,6 +31,20 @@
     margin-bottom: 20px;
   }
 
+  &--light {
+    @media (max-width: em(1280)) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 18px;
+    }
+  }
+
   @media (max-width: em(630)) {
     font-size: 24px;
   }
@@ -185,6 +199,12 @@
   @media (max-width: em(630)) {
     max-width: 280px;
     flex-direction: column;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
   }
 }
 
@@ -227,22 +247,121 @@
 }
 
 .process__list {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 27px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+
+  @media (max-width: em(630)) {
+    flex-direction: column;
+  }
 }
 
 .process__item {
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+
+    @media (max-width: em(1280)) {
+      height: 200px;
+    }
+
+    @media (max-width: $mobile) {
+      height: 160px;
+    }
+
+    @media (max-width: em(630)) {
+      height: 200px;
+    }
+  }
 }
 
 .process__text {
+  padding: 24px 30px 32px;
+  text-align: center;
+  line-height: 1.5;
+
+  @media (max-width: em(1280)) {
+    padding: 24px 30px;
+    font-size: 16px;
+  }
+
+  @media (max-width: em(972)) {
+    padding: 24px 16px 32px;
+    font-size: 14px;
+  }
+
+  @media (max-width: em(630)) {
+    padding: 24px 16px;
+  }
 }
 
 .process__button {
+  margin: 0 auto 120px;
+  display: block;
+  max-width: max-content;
+
+  @media (max-width: em(1280)) {
+    margin: 0 auto 95px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 auto 80px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin: 0 auto 60px;
+    padding: 16px 32px;
+    font-size: 12px;
+  }
 }
 
 .process__results {
+  display: flex;
+  gap: 30px;
+  line-height: 1.5;
+
+  @media (max-width: em(972)) {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: em(630)) {
+    flex-direction: column;
+  }
 }
 
 .process__result {
+  max-width: calc(33% - 20px);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+
+  @media (max-width: em(972)) {
+    max-width: calc(33% - 12px);
+    font-size: 14px;
+  }
+
+  @media (max-width: em(630)) {
+    padding: 20px 24px;
+    max-width: 100%;
+  }
 }
 
 .process__icon {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
 }
