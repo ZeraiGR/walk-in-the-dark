@@ -328,6 +328,32 @@ function initSliders() {
         },
       },
     });
+
+    new Swiper('.guides__slider', {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      spaceBetween: 30,
+      speed: 800,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.guides__next',
+        prevEl: '.guides__prev',
+      },
+      pagination: {
+        el: '.guides__pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+        },
+        769: {
+          slidesPerView: 1,
+        },
+      },
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
