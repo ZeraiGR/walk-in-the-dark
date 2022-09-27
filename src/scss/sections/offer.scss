@@ -1,0 +1,156 @@
+.offer {
+  margin-bottom: 120px;
+  line-height: 1.5;
+
+  @media (max-width: em(1280)) {
+    margin-bottom: 95px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 60px;
+  }
+}
+
+.offer__title {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.offer__list {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: em(1280)) {
+    gap: 32px 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: em(630)) {
+    margin-bottom: 30px;
+    gap: 20px 30px;
+  }
+}
+
+.offer__item {
+  max-width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  font-size: 16px;
+
+  @media (max-width: em(1280)) {
+    max-width: calc(33% - 20px);
+    width: 100%;
+  }
+
+  @media (max-width: em(630)) {
+    max-width: calc(50% - 15px);
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 12px;
+  }
+}
+
+.offer__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.offer__price {
+  margin: 0 auto;
+  display: block;
+  max-width: max-content;
+  font-weight: 900;
+
+  &--old {
+    margin-bottom: 5px;
+    font-size: 40px;
+    background-position: top;
+    background-image: url('@img/icons/line.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $mobile) {
+      font-size: 36px;
+    }
+  }
+
+  &--new {
+    margin-bottom: 40px;
+    font-size: 55px;
+    color: $accent;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+  }
+}
+
+.offer__button {
+  margin: 0 auto 24px;
+  display: block;
+  max-width: max-content;
+
+  @media (max-width: $mobileSmall) {
+    padding: 16px 32px;
+    font-size: 12px;
+  }
+}
+
+.offer__recommend {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 58px;
+  max-width: 225px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  background-image: url('@img/decor/food.png');
+  background-repeat: no-repeat;
+  background-size: 48px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-65%);
+    left: -108px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url('@img/decor/promo-arrow.svg');
+    background-repeat: no-repeat;
+    content: '';
+
+    @media (max-width: em(414)) {
+      display: none;
+    }
+  }
+
+  @media (max-width: em(630)) {
+    &::before {
+      width: 70px;
+      height: 70px;
+      transform: translateY(-90%);
+      left: -90px;
+    }
+  }
+}
