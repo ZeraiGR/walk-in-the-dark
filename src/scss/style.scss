@@ -175,6 +175,8 @@ body {
 @import 'components/chars';
 @import 'components/stock';
 @import 'components/pricelist';
+@import 'components/calendar';
+@import 'components/timing';
 
 //
 @import 'sections/promo';
@@ -201,6 +203,7 @@ body {
 @import 'sections/process';
 @import 'sections/price';
 @import 'sections/offer';
+@import 'sections/booking';
 
 // Подключение стилей отдельных блоков
 @import 'header';

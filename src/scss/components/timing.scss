@@ -1,0 +1,63 @@
+.timing {
+  padding: 40px 30px;
+  border-radius: 16px;
+  background-color: $blackLight;
+
+  @media (max-width: $mobile) {
+    padding: 30px 20px;
+  }
+}
+
+.timing__navigation {
+  margin-bottom: 30px;
+}
+
+.timing__hours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 23px;
+
+  @media (max-width: em(1280)) {
+    gap: 20px 8px;
+  }
+
+  @media (max-width: em(972)) {
+    gap: 20px 23px;
+  }
+
+  @media (max-width: em(630)) {
+    gap: 10px 13px;
+  }
+}
+
+.timing__hour {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: '';
+  }
+
+  &--sold {
+    background-color: $black;
+    cursor: not-allowed;
+  }
+
+  &--nightwalking {
+    background-color: #4232ff;
+  }
+
+  &--master-classes {
+    background-color: #0b9e34;
+  }
+}
+
+.time {
+}
+
+.places {
+}

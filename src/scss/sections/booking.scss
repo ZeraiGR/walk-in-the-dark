@@ -1,0 +1,239 @@
+.booking {
+  margin-bottom: 120px;
+
+  @media (max-width: em(1280)) {
+    margin-bottom: 95px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 60px;
+  }
+}
+
+.booking__title {
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.booking__info {
+  margin-bottom: 40px;
+  line-height: 1.5;
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 30px;
+  }
+}
+
+.booking__descr,
+.booking__accent {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.booking__descr {
+  @media (max-width: em(972)) {
+    font-size: 16px;
+  }
+
+  @media (max-width: em(630)) {
+    font-size: 14px;
+  }
+}
+
+.booking__accent {
+  display: block;
+  font-size: 20px;
+  color: $accent;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.booking__form {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 40px;
+
+  @media (max-width: em(1280)) {
+    gap: 20px;
+    grid-template-columns: 1fr 1.9fr;
+  }
+
+  @media (max-width: em(972)) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: em(630)) {
+    grid-template-columns: 100%;
+  }
+}
+
+.booking__calendar {
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 10px;
+  }
+}
+
+.booking__timing {
+  @media (max-width: em(972)) {
+    grid-column: 1 / 3;
+  }
+
+  @media (max-width: em(630)) {
+    grid-column: 1 / 2;
+  }
+}
+
+.booking__clues {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+  line-height: 1.5;
+
+  @media (max-width: em(1280)) {
+    gap: 20px;
+  }
+
+  @media (max-width: em(972)) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (max-width: em(630)) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+.booking__clue {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &--default {
+    .box {
+      background-color: $grey;
+    }
+  }
+
+  &--nightwalking {
+    .box {
+      background-color: #4232ff;
+    }
+
+    .booking__clue-descr {
+      max-width: 162px;
+      text-align: center;
+
+      @media (max-width: em(972)) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--master-classes {
+    .box {
+      background-color: #0b9e34;
+    }
+  }
+
+  &--sold {
+    .box {
+      border: 1px solid $greyLight;
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: em(1280)) {
+    gap: 10px;
+  }
+}
+
+.box {
+  position: relative;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+    background-color: $greyLight;
+    content: '';
+  }
+
+  span {
+    line-height: 1.5;
+
+    &:first-child {
+      padding: 10px 0 15px;
+
+      @media (max-width: em(972)) {
+        padding: 8px 0 10px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 6px 0 8px;
+      }
+    }
+
+    &:last-child {
+      padding: 15px 0 10px;
+
+      @media (max-width: em(972)) {
+        padding: 10px 0 8px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 8px 0 6px;
+      }
+    }
+  }
+
+  @media (max-width: em(1280)) {
+    width: 70px;
+  }
+
+  @media (max-width: em(630)) {
+    width: 60px;
+    font-size: 16px;
+  }
+}
+
+.booking__clue-descr {
+  max-width: 185px;
+  font-size: 16px;
+
+  span {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+
+      @media (max-width: em(630)) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: em(1280)) {
+    font-size: 12px;
+  }
+}

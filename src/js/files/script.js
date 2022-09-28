@@ -105,7 +105,19 @@ const citySearchHandler = () => {
   }
 };
 
+const initCalendar = () => {
+  // const date = new Date();
+  // const month = date.getMonth();
+  // const dateMonth = document.querySelector('.date__month');
+  // const dateYear = document.querySelector('.date__year');
+  // const months = Array.from(document.querySelector('.months').children).map((el) => el.textContent);
+  // dateMonth.innerHTML = months[date.getMonth()];
+  // dateYear.innerHTML = date.getFullYear();
+  // console.log(months);
+};
+
 soundBtnsHandler();
 subtabsHandler();
 placementMarkersHandler();
 citySearchHandler();
+initCalendar();
