@@ -2,7 +2,8 @@
   &--products,
   &--partners,
   &--gallery,
-  &--guides {
+  &--guides,
+  &--testimonials {
     margin-bottom: 115px;
 
     @media (max-width: em(1280)) {
@@ -15,6 +16,20 @@
 
     @media (max-width: $mobileSmall) {
       margin-bottom: 60px;
+    }
+  }
+
+  &--testimonials {
+    .slider__title {
+      @media (max-width: $mobileSmall) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .testimonials__subtitle {
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -432,5 +447,19 @@
   @media (max-width: em(630)) {
     padding: 16px 32px;
     font-size: 12px;
+  }
+}
+
+// testimonials
+
+.testimonials__slide {
+  transition: opacity 0.3s;
+
+  @media (max-width: $mobile) {
+    opacity: 0.5;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
   }
 }
