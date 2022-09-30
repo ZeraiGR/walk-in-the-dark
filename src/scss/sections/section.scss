@@ -1,4 +1,8 @@
 .section {
+  &--demo {
+    padding: 20px 0 0;
+  }
+
   padding: 20px 0 96px;
 
   .breadcrumbs {
@@ -15,10 +19,18 @@
 
   @media (max-width: $tablet) {
     padding: 20px 0 80px;
+
+    &--demo {
+      padding: 20px 0 0;
+    }
   }
 
   @media (max-width: em(630)) {
     padding: 15px 0 60px;
+
+    &--demo {
+      padding: 15px 0 0;
+    }
   }
 
   &--single {

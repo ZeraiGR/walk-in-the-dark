@@ -26,305 +26,422 @@
 
 
 		<form class="booking__form">
-			<!-- Possible data structure: -->
-			<!-- Some day -->
-			<!--   Arbat -->
-			<!--     time: 10:15 -->
-			<!--       free places: 8 -->
-			<!--       status: sold | master-classes | nightwalking | default -->
-			<!--     time: 11:15 -->
-			<!--       ... -->
-			<!--     ... -->
-			<!--   Riviera -->
-			<!--     time 10:15 -->
-			<!--     ... -->
+			<div class="booking__start">
+				<div class="booking__calendar calendar">
+					<div class="calendar__month">
+						<button class="calendar__btn calendar__btn--prev prev" type="button" aria-label="previous month"></button>
 
-			<div class="booking__calendar calendar">
-				<div class="calendar__month">
-					<button class="calendar__btn calendar__btn--prev prev" type="button" aria-label="previous month"></button>
+						<div class="date">
+							<span class="date__month">Сентябрь</span>,
+							<span class="date__year">2022</span>
+						</div>
 
-					<div class="date">
-						<span class="date__month">Сентябрь</span>,
-						<span class="date__year">2022</span>
+						<button class="calendar__btn calendar__btn--next next" type="button" aria-label="next month"></button>
 					</div>
 
-					<button class="calendar__btn calendar__btn--next next" type="button" aria-label="next month"></button>
-				</div>
-
-				<!-- it's invisible for multilang -->
-				<ul class="calendar__months">
-					<li>Январь</li>
-					<li>Февраль</li>
-					<li>Март</li>
-					<li>Апрель</li>
-					<li>Май</li>
-					<li>Июнь</li>
-					<li>Июль</li>
-					<li>Август</li>
-					<li>Сентябрь</li>
-					<li>Октябрь</li>
-					<li>Ноябрь</li>
-					<li>Декабрь</li>
-				</ul>
-
-				<div class="calendar__content">
-					<ul class="calendar__weekdays">
-						<li>Пн</li>
-						<li>вт</li>
-						<li>ср</li>
-						<li>чт</li>
-						<li>пт</li>
-						<li>сб</li>
-						<li>вс</li>
+					<ul class="calendar__months">
+						<li>Январь</li>
+						<li>Февраль</li>
+						<li>Март</li>
+						<li>Апрель</li>
+						<li>Май</li>
+						<li>Июнь</li>
+						<li>Июль</li>
+						<li>Август</li>
+						<li>Сентябрь</li>
+						<li>Октябрь</li>
+						<li>Ноябрь</li>
+						<li>Декабрь</li>
 					</ul>
 
-					<div class="calendar__days">
-						<div class="prev-date">26</div>
-						<div class="prev-date">27</div>
-						<div class="prev-date">28</div>
-						<div class="prev-date">29</div>
-						<div class="prev-date">30</div>
-						<div>1</div>
-						<div>2</div>
-						<div>3</div>
-						<div>4</div>
-						<div>5</div>
-						<div>6</div>
-						<div>7</div>
-						<div>8</div>
-						<div>9</div>
-						<div>10</div>
-						<div>11</div>
-						<div>12</div>
-						<div>13</div>
-						<div>14</div>
-						<div>15</div>
-						<div>16</div>
-						<div>17</div>
-						<div>18</div>
-						<div>19</div>
-						<div>20</div>
-						<div>21</div>
-						<div>22</div>
-						<div>23</div>
-						<div>24</div>
-						<div>25</div>
-						<div>26</div>
-						<div>27</div>
-						<div>28</div>
-						<div>29</div>
-						<div>30</div>
-						<div>31</div>
-						<div class="next-date">1</div>
-						<div class="next-date">2</div>
-						<div class="next-date">3</div>
-						<div class="next-date">4</div>
-						<div class="next-date">5</div>
-						<div class="next-date">6</div>
-					</div>
+					<div class="calendar__content">
+						<ul class="calendar__weekdays">
+							<li>Пн</li>
+							<li>вт</li>
+							<li>ср</li>
+							<li>чт</li>
+							<li>пт</li>
+							<li>сб</li>
+							<li>вс</li>
+						</ul>
 
-					<div class="calendar__menu">
-						<button class="calendar__button" id="today" type="button">
-							Сегодня
-						</button>
-
-						<button class="calendar__button" id="clear" type="button">
-							Очистить
-						</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="booking__timing timing">
-				<div data-tabs class="tabs">
-					<nav data-tabs-titles class="timing__navigation tabs__navigation">
-						<button class="tabs__title _tab-active" type="button">Арбат</button>
-						<button class="tabs__title" type="button">ТРЦ “Ривьера”</button>
-					</nav>
-
-					<div data-tabs-body class="tabs__content">
-						<div class="tabs__body">
-							<ul class="timing__hours">
-								<li class="timing__hour box">
-									<span class="time">10:15</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box timing__hour--sold">
-									<span class="time">11:15</span>
-									<span class="places">0</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">12:15</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">13:45</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">14:45</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">15:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">16:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">16:15</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box timing__hour--nightwalking">
-									<span class="time">17:30</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">18:30</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box timing__hour--master-classes">
-									<span class="time">20:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">21:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">22:00</span>
-									<span class="places">8</span>
-								</li>
-							</ul>
+						<div class="calendar__days">
+							<div class="prev-date">26</div>
+							<div class="prev-date">27</div>
+							<div class="prev-date">28</div>
+							<div class="prev-date">29</div>
+							<div class="prev-date">30</div>
+							<div>1</div>
+							<div>2</div>
+							<div>3</div>
+							<div>4</div>
+							<div>5</div>
+							<div>6</div>
+							<div>7</div>
+							<div>8</div>
+							<div>9</div>
+							<div>10</div>
+							<div>11</div>
+							<div>12</div>
+							<div>13</div>
+							<div>14</div>
+							<div>15</div>
+							<div>16</div>
+							<div>17</div>
+							<div>18</div>
+							<div>19</div>
+							<div>20</div>
+							<div>21</div>
+							<div>22</div>
+							<div>23</div>
+							<div>24</div>
+							<div>25</div>
+							<div>26</div>
+							<div>27</div>
+							<div>28</div>
+							<div>29</div>
+							<div>30</div>
+							<div>31</div>
+							<div class="next-date">1</div>
+							<div class="next-date">2</div>
+							<div class="next-date">3</div>
+							<div class="next-date">4</div>
+							<div class="next-date">5</div>
+							<div class="next-date">6</div>
 						</div>
-						<div class="tabs__body">
-							<ul class="timing__hours">
-								<li class="timing__hour box">
-									<span class="time">10:15</span>
-									<span class="places">8</span>
-								</li>
 
-								<li class="timing__hour box timing__hour--sold">
-									<span class="time">11:15</span>
-									<span class="places">0</span>
-								</li>
+						<div class="calendar__menu">
+							<button class="calendar__button" id="today" type="button">
+								Сегодня
+							</button>
 
-								<li class="timing__hour box">
-									<span class="time">12:15</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">13:45</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">14:45</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box timing__hour--nightwalking">
-									<span class="time">15:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">16:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">16:15</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">17:30</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">18:30</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">20:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box timing__hour--master-classes">
-									<span class="time">21:00</span>
-									<span class="places">8</span>
-								</li>
-
-								<li class="timing__hour box">
-									<span class="time">22:00</span>
-									<span class="places">8</span>
-								</li>
-							</ul>
+							<button class="calendar__button" id="clear" type="button">
+								Очистить
+							</button>
 						</div>
 					</div>
 				</div>
+
+				<div class="booking__timing timing">
+					<div data-tabs class="tabs">
+						<nav data-tabs-titles class="timing__navigation tabs__navigation">
+							<button class="tabs__title _tab-active" type="button">Арбат</button>
+							<button class="tabs__title" type="button">ТРЦ “Ривьера”</button>
+						</nav>
+
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<ul class="timing__hours">
+									<li class="timing__hour box">
+										<span class="time">10:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--sold">
+										<span class="time">11:15</span>
+										<span class="places">0</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">12:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">13:45</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">14:45</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">15:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">16:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">16:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--nightwalking">
+										<span class="time">17:30</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">18:30</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--master-classes">
+										<span class="time">20:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">21:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">22:00</span>
+										<span class="places">8</span>
+									</li>
+								</ul>
+							</div>
+							<div class="tabs__body">
+								<ul class="timing__hours">
+									<li class="timing__hour box">
+										<span class="time">10:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--sold">
+										<span class="time">11:15</span>
+										<span class="places">0</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">12:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">13:45</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">14:45</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--nightwalking">
+										<span class="time">15:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">16:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">16:15</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">17:30</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">18:30</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">20:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box timing__hour--master-classes">
+										<span class="time">21:00</span>
+										<span class="places">8</span>
+									</li>
+
+									<li class="timing__hour box">
+										<span class="time">22:00</span>
+										<span class="places">8</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<ul class="booking__clues">
+					<li class="booking__clue booking__clue--default">
+						<div class="box">
+							<span>xx:xx</span>
+							<span>x</span>
+						</div>
+						<div class="booking__clue-descr">
+							<span>- Время экскурсии</span>
+							<span>- Кол-во свободных мест</span>
+						</div>
+					</li>
+
+					<li class="booking__clue booking__clue--nightwalking">
+						<div class="box">
+							<span>xx:xx</span>
+							<span>x</span>
+						</div>
+						<div class="booking__clue-descr">
+							<span>- Прогулка в темноте 90 минут</span>
+						</div>
+					</li>
+
+					<li class="booking__clue booking__clue--master-classes">
+						<div class="box">
+							<span>xx:xx</span>
+							<span>x</span>
+						</div>
+						<div class="booking__clue-descr">
+							<span>- Мастер-классы гидов</span>
+						</div>
+					</li>
+
+					<li class="booking__clue booking__clue--sold">
+						<div class="box">
+							<span>xx:xx</span>
+							<span>x</span>
+						</div>
+						<div class="booking__clue-descr">
+							<span>- Билеты распроданы</span>
+						</div>
+					</li>
+				</ul>
 			</div>
 
-			<ul class="booking__clues">
-				<li class="booking__clue booking__clue--default">
-					<div class="box">
-						<span>xx:xx</span>
-						<span>x</span>
-					</div>
-					<div class="booking__clue-descr">
-						<span>- Время экскурсии</span>
-						<span>- Кол-во свободных мест</span>
-					</div>
-				</li>
+			<!-- <div class="booking__finish">
+				<button class="booking__backlink" type="button">Выбрать другое время</button>
 
-				<li class="booking__clue booking__clue--nightwalking">
-					<div class="box">
-						<span>xx:xx</span>
-						<span>x</span>
-					</div>
-					<div class="booking__clue-descr">
-						<span>- Прогулка в темноте 90 минут</span>
-					</div>
-				</li>
+				<div class="booking__content">
+					<div class="booking__data">
+						<div class="booking__part booking__part--tickets">
+							<strong class="booking__heading">Билеты</strong>
+							<span class="booking__available">(доступно:6)</span>
 
-				<li class="booking__clue booking__clue--master-classes">
-					<div class="box">
-						<span>xx:xx</span>
-						<span>x</span>
-					</div>
-					<div class="booking__clue-descr">
-						<span>- Мастер-классы гидов</span>
-					</div>
-				</li>
+							<div class="booking__field field">
+								<label class="sr-only" for="quantity-adult">
+									Колличество взрослых
+								</label>
+								<input class="field__input" id="quantity-adult" name="quantity-adult" type="text"
+									placeholder="Колличество взрослых" required data-validate data-required
+									data-error="Это поле необходимо заполнить">
+							</div>
 
-				<li class="booking__clue booking__clue--sold">
-					<div class="box">
-						<span>xx:xx</span>
-						<span>x</span>
+							<div class="booking__field field">
+								<label class="sr-only" for="quantity-child">
+									Кол-во детских (от 7 до 14 лет)
+								</label>
+								<input class="field__input" id="quantity-child" name="quantity-child" type="text"
+									placeholder="Кол-во детских (от 7 до 14 лет) " required data-validate data-required
+									data-error="Это поле необходимо заполнить">
+							</div>
+						</div>
+
+						<div class="booking__part booking__part--contacts">
+							<strong class="booking__heading">Контактные данные</strong>
+							<span class="booking__detail">
+								(для отправки кода бронирования)
+							</span>
+
+							<div class="booking__field field">
+								<label class="sr-only" for="book-user-mail">Email <span>*</span></label>
+								<input class="field__input" id="book-user-mail" name="book-user-mail" type="email"
+									placeholder="Введите ваш email" required data-validate data-required="email"
+									data-error="Введен не верный E-mail">
+							</div>
+
+							<div class="booking__field field">
+								<label class="sr-only" for="book-user-phone">Телефон <span>*</span></label>
+								<input class="field__input tel" id="book-user-phone" name="book-user-phone" type="tel"
+									placeholder="+7(___)___-__-__" required data-validate data-required
+									data-error="Введен не верный телефон" minlength="10">
+							</div>
+						</div>
+
+						<div class="booking__part booking__part--payment">
+							<strong class="booking__heading">Способ оплаты</strong>
+
+							<div class="booking__field field">
+								<label class="sr-only" for="payment-method">
+									Visa / Mastarcard / МИР
+								</label>
+								<input class="field__input" id="payment-method" name="payment-method" type="text"
+									placeholder="Visa / Mastarcard / МИР" required data-validate
+									data-error="Это поле необходимо заполнить">
+							</div>
+						</div>
+
+						<div class="booking__part booking__part--gift">
+							<strong class="booking__heading">
+								Номер подарочной карты (сертификата) или промо-код
+							</strong>
+
+							<div class="booking__field-box">
+								<div class="booking__field field">
+									<label class="sr-only" for="promocode">
+										XXX-XX
+									</label>
+									<input class="field__input" id="promocode" name="promocode" type="text" placeholder="XXX-XX" required
+										data-validate data-error="Это поле необходимо заполнить">
+								</div>
+								<button class="booking__button button button--l button--ghost" type="button">
+									проверить
+								</button>
+							</div>
+						</div>
 					</div>
-					<div class="booking__clue-descr">
-						<span>- Билеты распроданы</span>
+
+					<div class="booking__result">
+						<strong class="booking__heading">
+							Вы выбрали:
+						</strong>
+
+						<ul class="booking__resume">
+							<li class="booking__resume-item">
+								<span>Адрес:</span>
+								<strong id="booked-address">Арбат</strong>
+							</li>
+
+							<li class="booking__resume-item">
+								<span>Дата и время:</span>
+								<strong id="booked-date">25.08.2022 (четверг) 17:30</strong>
+							</li>
+
+							<li class="booking__resume-item">
+								<span>Дата и время:</span>
+								<strong id="booked-quantity">1 взрослый, 0 детских</strong>
+							</li>
+
+							<li class="booking__resume-item">
+								<span>Цена:</span>
+								<strong id="booked-price">1190 ₽</strong>
+							</li>
+						</ul>
+
+						<button class="booking__submit button button--l" type="submit">
+							оплатить билеты
+						</button>
+
+						<div class="field field--agreement">
+							<div class="field__checkbox checkbox">
+								<input id="agreement" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="agreement" required>
+
+								<label for="agreement" class="checkbox__label">
+									<span class="checkbox__text">
+										Я принимаю <a href="#">условия обработки персональных данных</a>
+									</span>
+								</label>
+							</div>
+						</div>
 					</div>
-				</li>
-			</ul>
+				</div>
+			</div> -->
 		</form>
 	</div>
 </section>
