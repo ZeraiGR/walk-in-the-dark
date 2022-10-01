@@ -46,10 +46,23 @@
     text-align: center;
     font-size: 14px;
     cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $accent;
+      color: $black;
+    }
 
     &.prev-date,
     &.next-date {
       color: $greyLight;
+
+      &:hover {
+        background-color: transparent;
+        color: $greyLight;
+        cursor: initial;
+      }
     }
   }
 }
