@@ -36,6 +36,14 @@ const galleries = document.querySelectorAll('.video-preview');
 
 if (galleries.length) {
   galleries.forEach((gallery) => {
+    gallery.addEventListener('lgBeforeOpen', () => {
+      document.documentElement.classList.add('lock');
+    });
+
+    gallery.addEventListener('lgAfterClose', () => {
+      document.documentElement.classList.remove('lock');
+    });
+
     lightGallery(gallery, {
       plugins: [lgVideo],
       licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',

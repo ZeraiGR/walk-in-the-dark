@@ -290,3 +290,76 @@
     font-size: 16px;
   }
 }
+
+// decor
+
+.decor {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    height: 291px;
+    width: 291px;
+    content: '';
+    filter: blur(200px);
+    border-radius: 50%;
+
+    @media (max-width: em(1024)) {
+      display: none;
+    }
+  }
+
+  &::before {
+    background-color: #ff3c5f;
+  }
+
+  &::after {
+    background-color: $accent;
+  }
+
+  &--bottom-left-r {
+    &::before {
+      bottom: 15%;
+      left: -5%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--top-left-r {
+    &::before {
+      top: -20%;
+      left: -5%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--mid-right-y {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 45%;
+      right: -10%;
+    }
+  }
+
+  &--top-left-y-mid-right-r {
+    &::before {
+      top: 45%;
+      right: -10%;
+    }
+
+    &::after {
+      top: -10%;
+      left: -5%;
+    }
+  }
+}
