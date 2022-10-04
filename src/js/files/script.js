@@ -106,14 +106,120 @@ const citySearchHandler = () => {
 };
 
 const initCalendar = () => {
-  // const date = new Date();
-  // const month = date.getMonth();
-  // const dateMonth = document.querySelector('.date__month');
-  // const dateYear = document.querySelector('.date__year');
-  // const months = Array.from(document.querySelector('.months').children).map((el) => el.textContent);
-  // dateMonth.innerHTML = months[date.getMonth()];
-  // dateYear.innerHTML = date.getFullYear();
-  // console.log(months);
+  let date = new Date();
+  let isChanged = false;
+  let currentDay = 0;
+  let currentMonth = '';
+  let currentYear = '';
+
+  // html elems
+  const daysWrapper = document.querySelector('.calendar__days');
+  const todayBtn = document.querySelector('#today');
+  const resetBtn = document.querySelector('#clear');
+  const dateMonth = document.querySelector('.date__month');
+  const dateYear = document.querySelector('.date__year');
+  const nextMonthBtn = document.querySelector('.calendar__btn--next');
+  const prevMonthBtn = document.querySelector('.calendar__btn--prev');
+  const months = Array.from(document.querySelector('.calendar__months').children).map(
+    (el) => el.textContent,
+  );
+
+  const renderCalendar = () => {
+    date.setDate(1);
+
+    let days = '';
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
+    const firstDayIndex = date.getDay();
+    const nextDays = 7 - lastDayIndex - 1;
+
+    dateMonth.innerHTML = months[date.getMonth()];
+    dateYear.innerHTML = date.getFullYear();
+
+    for (let x = firstDayIndex - 1; x > 0; x--) {
+      days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+    }
+
+    for (let i = 1; i <= lastDay; i++) {
+      if (
+        isChanged &&
+        i === currentDay &&
+        date.getMonth() === currentMonth &&
+        date.getFullYear() === currentYear
+      ) {
+        days += `<div class="day today">${i}</div>`;
+      } else if (
+        !isChanged &&
+        i === new Date().getDate() &&
+        date.getMonth() === new Date().getMonth() &&
+        date.getFullYear() === new Date().getFullYear()
+      ) {
+        days += `<div class="day today">${i}</div>`;
+      } else if (
+        (i < new Date().getDate() && date.getMonth() === new Date().getMonth()) ||
+        (date.getMonth() < new Date().getMonth() &&
+          date.getFullYear() === new Date().getFullYear()) ||
+        date.getFullYear() < new Date().getFullYear()
+      ) {
+        days += `<div class="prev-date">${i}</div>`;
+      } else {
+        days += `<div class="day">${i}</div>`;
+      }
+    }
+
+    for (let j = 1; j <= nextDays + 1; j++) {
+      days += `<div class="next-date">${j}</div>`;
+    }
+
+    daysWrapper.innerHTML = days;
+  };
+
+  daysWrapper.addEventListener('click', (e) => {
+    const target = e.target;
+
+    if (target.classList.contains('day')) {
+      isChanged = true;
+
+      const days = document.querySelectorAll('.day');
+      days.forEach((el) => el.classList.remove('today'));
+      target.classList.add('today');
+
+      currentDay = parseInt(target.textContent);
+      currentMonth = parseInt(months.indexOf(dateMonth.textContent));
+      currentYear = parseInt(dateYear.textContent);
+    }
+  });
+
+  prevMonthBtn.addEventListener('click', () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
+
+  todayBtn.addEventListener('click', () => {
+    isChanged = false;
+
+    date.setMonth(new Date().getMonth());
+    date.setFullYear(new Date().getFullYear());
+    date.setDate(new Date().getDate());
+    renderCalendar();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    isChanged = false;
+
+    date.setMonth(new Date().getMonth());
+    date.setFullYear(new Date().getFullYear());
+    date.setDate(new Date().getDate());
+    renderCalendar();
+  });
+
+  renderCalendar();
 };
 
 soundBtnsHandler();

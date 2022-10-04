@@ -36,6 +36,7 @@
   flex-direction: column;
   background-color: $grey;
   cursor: pointer;
+  transition: color 0.3s ease;
 
   &::after {
     position: absolute;
@@ -44,7 +45,7 @@
 
   &--sold {
     background-color: $black;
-    cursor: not-allowed;
+    pointer-events: none;
   }
 
   &--nightwalking {
@@ -53,6 +54,10 @@
 
   &--master-classes {
     background-color: #0b9e34;
+  }
+
+  &:hover {
+    color: $accent;
   }
 }
 
