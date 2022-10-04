@@ -64,6 +64,10 @@
   grid-template-columns: 1fr 2.5fr;
   gap: 40px;
 
+  &.hide {
+    display: none;
+  }
+
   @media (max-width: em(1280)) {
     gap: 20px;
     grid-template-columns: 1fr 1.9fr;
@@ -244,6 +248,10 @@
 .booking__finish {
   display: none;
   line-height: 1.5;
+
+  &.show {
+    display: block;
+  }
 }
 
 .booking__backlink {

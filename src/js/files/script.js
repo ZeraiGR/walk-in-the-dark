@@ -191,35 +191,68 @@ const initCalendar = () => {
     }
   });
 
-  prevMonthBtn.addEventListener('click', () => {
-    date.setMonth(date.getMonth() - 1);
-    renderCalendar();
-  });
+  if (prevMonthBtn) {
+    prevMonthBtn.addEventListener('click', () => {
+      date.setMonth(date.getMonth() - 1);
+      renderCalendar();
+    });
+  }
 
-  nextMonthBtn.addEventListener('click', () => {
-    date.setMonth(date.getMonth() + 1);
-    renderCalendar();
-  });
+  if (nextMonthBtn) {
+    nextMonthBtn.addEventListener('click', () => {
+      date.setMonth(date.getMonth() + 1);
+      renderCalendar();
+    });
+  }
 
-  todayBtn.addEventListener('click', () => {
-    isChanged = false;
+  if (todayBtn) {
+    todayBtn.addEventListener('click', () => {
+      isChanged = false;
 
-    date.setMonth(new Date().getMonth());
-    date.setFullYear(new Date().getFullYear());
-    date.setDate(new Date().getDate());
-    renderCalendar();
-  });
+      date.setMonth(new Date().getMonth());
+      date.setFullYear(new Date().getFullYear());
+      date.setDate(new Date().getDate());
+      renderCalendar();
+    });
+  }
 
-  resetBtn.addEventListener('click', () => {
-    isChanged = false;
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      isChanged = false;
 
-    date.setMonth(new Date().getMonth());
-    date.setFullYear(new Date().getFullYear());
-    date.setDate(new Date().getDate());
-    renderCalendar();
-  });
+      date.setMonth(new Date().getMonth());
+      date.setFullYear(new Date().getFullYear());
+      date.setDate(new Date().getDate());
+      renderCalendar();
+    });
+  }
 
   renderCalendar();
+};
+
+const initBooking = () => {
+  const toursBox = document.querySelectorAll('.timing__hours');
+  const start = document.querySelector('.booking__start');
+  const finish = document.querySelector('.booking__finish');
+  const backlink = document.querySelector('.booking__backlink');
+
+  if (toursBox && backlink) {
+    toursBox.forEach((box) => {
+      box.addEventListener('click', (e) => {
+        const target = e.target.closest('.timing__hour');
+
+        if (target) {
+          finish.classList.add('show');
+          start.classList.add('hide');
+        }
+      });
+    });
+
+    backlink.addEventListener('click', () => {
+      finish.classList.remove('show');
+      start.classList.remove('hide');
+    });
+  }
 };
 
 soundBtnsHandler();
@@ -227,3 +260,4 @@ subtabsHandler();
 placementMarkersHandler();
 citySearchHandler();
 initCalendar();
+initBooking();
