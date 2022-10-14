@@ -120,9 +120,13 @@ const initCalendar = () => {
   const dateYear = document.querySelector('.date__year');
   const nextMonthBtn = document.querySelector('.calendar__btn--next');
   const prevMonthBtn = document.querySelector('.calendar__btn--prev');
-  const months = Array.from(document.querySelector('.calendar__months').children).map(
-    (el) => el.textContent,
-  );
+  let months = [];
+
+  if (document.querySelector('.calendar__months')) {
+    months = Array.from(document.querySelector('.calendar__months').children).map(
+      (el) => el.textContent,
+    );
+  }
 
   const renderCalendar = () => {
     date.setDate(1);
@@ -175,21 +179,23 @@ const initCalendar = () => {
     daysWrapper.innerHTML = days;
   };
 
-  daysWrapper.addEventListener('click', (e) => {
-    const target = e.target;
+  if (daysWrapper) {
+    daysWrapper.addEventListener('click', (e) => {
+      const target = e.target;
 
-    if (target.classList.contains('day')) {
-      isChanged = true;
+      if (target.classList.contains('day')) {
+        isChanged = true;
 
-      const days = document.querySelectorAll('.day');
-      days.forEach((el) => el.classList.remove('today'));
-      target.classList.add('today');
+        const days = document.querySelectorAll('.day');
+        days.forEach((el) => el.classList.remove('today'));
+        target.classList.add('today');
 
-      currentDay = parseInt(target.textContent);
-      currentMonth = parseInt(months.indexOf(dateMonth.textContent));
-      currentYear = parseInt(dateYear.textContent);
-    }
-  });
+        currentDay = parseInt(target.textContent);
+        currentMonth = parseInt(months.indexOf(dateMonth.textContent));
+        currentYear = parseInt(dateYear.textContent);
+      }
+    });
+  }
 
   if (prevMonthBtn) {
     prevMonthBtn.addEventListener('click', () => {
@@ -227,7 +233,9 @@ const initCalendar = () => {
     });
   }
 
-  renderCalendar();
+  if (daysWrapper) {
+    renderCalendar();
+  }
 };
 
 const initBooking = () => {

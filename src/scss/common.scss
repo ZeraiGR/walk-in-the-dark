@@ -1,10 +1,9 @@
 // Button
 
 .button {
-  padding: 16px 48px;
-  background-color: $accent;
-  border-radius: 100px;
-  box-shadow: 0 16px 40px 0 #c8a2004d;
+  padding: 20px 32px;
+  background: $accent;
+  border-radius: 8px;
   text-transform: uppercase;
   font-weight: 700;
   color: $black;
@@ -19,14 +18,11 @@
   }
 
   &--ghost {
-    color: $accent;
-    background-color: transparent;
-    border: 1px solid $accent;
-
-    &:hover,
-    &:active {
-      color: $black;
-    }
+    position: relative;
+    background: $accent;
+    border: 1px solid #e9277c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &--l {
@@ -179,7 +175,7 @@
 
     &::before {
       width: 16px;
-      background-image: url('@img/icons/location.svg');
+      background-image: url('@img/icons/location-big.svg');
     }
   }
 

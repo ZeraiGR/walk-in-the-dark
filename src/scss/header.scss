@@ -177,7 +177,6 @@
 .header__bottom {
   padding: 8px 0;
   border-top: 1px solid $grey;
-  border-bottom: 1px solid $grey;
 
   @media (max-width: em(1230)) {
     padding: 0;
@@ -281,8 +280,9 @@
 }
 
 .header__support {
-  padding: 12px 32px;
+  margin-left: auto;
   display: block;
+  padding: 12px 32px;
 
   @media (max-width: em(1230)) {
     box-shadow: none;

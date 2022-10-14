@@ -1,17 +1,21 @@
 @font-face {
-  font-family: Mont;
-  font-display: swap;
-  src: url('../fonts/Mont-Black.woff2') format('woff2'),
-    url('../fonts/Mont-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
+	font-family: Circe;
+	font-display: swap;
+	src: url("../fonts/Circe-Bold.woff2") format("woff2"), url("../fonts/Circe-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
 }
-
 @font-face {
-  font-family: Monda;
-  font-display: swap;
-  src: url('../fonts/Monda-Regular.woff2') format('woff2'),
-    url('../fonts/Monda-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+	font-family: Gilroy;
+	font-display: swap;
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Circe;
+	font-display: swap;
+	src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
 }

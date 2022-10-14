@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  color: $white;
-  line-height: 1.3;
+  color: $black;
+  line-height: 1.5;
   font-family: $fontFamily, sans-serif;
   font-size: $fontSize;
   -ms-text-size-adjust: 100%;
@@ -26,7 +26,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $black;
+  background-color: $white;
 }
 
 input,

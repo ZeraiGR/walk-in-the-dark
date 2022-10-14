@@ -163,6 +163,14 @@
     }
   }
 
+  &--callback {
+    .form__content {
+      @media (max-width: em(768)) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
   .field {
     margin-bottom: 16px;
 
