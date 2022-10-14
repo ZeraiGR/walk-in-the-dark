@@ -1,6 +1,9 @@
 .promo {
   &--main {
-    padding: 50px 0 120px;
+    padding: 80px 0 120px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 63% 80%;
 
     @media (max-width: em(1280)) {
       padding: 60px 0 95px;
@@ -639,7 +642,14 @@
 
 .promo__title {
   margin-bottom: 24px;
-  line-height: 1.5;
+  font-size: 60px;
+  line-height: 1;
+
+  strong {
+    display: block;
+    font-weight: 400;
+    color: $yellow;
+  }
 
   @media (max-width: em(972)) {
     max-width: 50%;
@@ -712,7 +722,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      background-color: $accent;
+      background-color: $yellow;
       border-radius: 50%;
     }
 
@@ -795,11 +805,10 @@
 }
 
 .promo__button {
-  margin-bottom: 24px;
   display: inline-block;
+  font-size: 16px;
 
   @media (max-width: em(630)) {
-    margin: 0 auto 20px;
     font-size: 12px;
   }
 
@@ -809,8 +818,6 @@
 }
 
 .promo__cards {
-  margin: 0 auto;
-  max-width: 915px;
   display: flex;
   gap: 30px;
 
@@ -824,13 +831,9 @@
 }
 
 .promo__card {
-  max-width: 285px;
+  max-width: 380px;
   width: 100%;
   padding: 32px 24px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   p {
     font-size: 16px;
@@ -862,7 +865,9 @@
 }
 
 .promo__icon {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  width: 90px;
+  height: 90px;
 
   &--eye {
     width: 48px;
