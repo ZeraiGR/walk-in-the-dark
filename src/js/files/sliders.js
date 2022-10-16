@@ -93,44 +93,27 @@ function initSliders() {
       on: {},
     });
 
-    new Swiper('.gallery__slider', {
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Pagination],
-      /*
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-      observer: true,
-      observeParents: true,
-      spaceBetween: 30,
-      speed: 800,
-      slidesPerView: 'auto',
-      // centeredSlides: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      // loop: true,
-      //preloadImages: false,
-      //lazy: true,
-      // Dotts
-      pagination: {
-        el: '.gallery__pagination',
-        clickable: true,
-      },
-      // Arrows
-      breakpoints: {
-        320: {
-          spaceBetween: 17,
-        },
-        768: {
-          spaceBetween: 24,
-        },
-      },
-      on: {},
-    });
+    // new Swiper('.gallery__slider', {
+    //   modules: [Pagination],
+    //   observer: true,
+    //   observeParents: true,
+    //   spaceBetween: 30,
+    //   speed: 800,
+    //   slidesPerView: 'auto',
+    //   pagination: {
+    //     el: '.gallery__pagination',
+    //     clickable: true,
+    //   },
+    //   breakpoints: {
+    //     320: {
+    //       spaceBetween: 17,
+    //     },
+    //     768: {
+    //       spaceBetween: 24,
+    //     },
+    //   },
+    //   on: {},
+    // });
 
     new Swiper('.testimonials__slider', {
       // Подключаем модули слайдера
