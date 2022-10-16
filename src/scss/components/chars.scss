@@ -1,20 +1,19 @@
 .chars {
   display: flex;
-  gap: 20px;
-
-  margin-bottom: 120px;
+  gap: 30px;
+  margin: 120px 0 80px;
 
   @media (max-width: em(1280)) {
-    margin-bottom: 95px;
+    // margin-bottom: 95px;
   }
 
   @media (max-width: $mobile) {
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
     flex-wrap: wrap;
   }
 
   @media (max-width: $mobileSmall) {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 }
 
@@ -25,6 +24,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 40px 80px 0 #292e410a;
 
   @media (max-width: em(1280)) {
     padding: 20px;
@@ -51,9 +51,8 @@
 
 .chars__title {
   margin-bottom: 16px;
-  font-weight: 900;
-  font-family: 'Mont', sans-serif;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
 
   @media (max-width: em(1280)) {
     font-size: 14px;
@@ -61,8 +60,7 @@
 }
 
 .chars__descr {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 18px;
 
   @media (max-width: em(1280)) {
     font-size: 14px;
