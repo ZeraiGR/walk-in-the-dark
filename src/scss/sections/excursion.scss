@@ -3,33 +3,12 @@
 
   &--dark {
     margin-bottom: 60px;
-    background-position: right;
-    background-size: 873px 100%;
-    background-image: url('@img/decor/excursion-dark.jpg');
 
     .excursion__wrapper {
       justify-content: flex-end;
-
-      @media (max-width: em(1366)) {
-        justify-content: center;
-      }
-
-      @media (max-width: em(972)) {
-        padding: 224px 0 284px;
-        background-image: url('@img/decor/excursion-dark-mobile.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-
-      @media (max-width: $mobileSmall) {
-        padding: 160px 0 220px;
-      }
     }
 
     .excursion__info {
-      padding: 0 40px;
-
       @media (max-width: $mobile) {
         padding: 0 20px;
       }
@@ -98,7 +77,8 @@
 .excursion__top {
   margin-bottom: 30px;
   padding-left: 80px;
-  background-image: url('@img/icons/clock.svg');
+  background-size: 50px;
+  background-image: url('@img/icons/stopwatch.svg');
   background-repeat: no-repeat;
 
   @media (max-width: $mobileSmall) {
@@ -111,9 +91,8 @@
 .excursion__label {
   margin-bottom: 10px;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
-  font-family: 'Monda', sans-serif;
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 3px;
@@ -131,8 +110,7 @@
 
 .excursion__duration {
   font-size: 30px;
-  font-weight: 700;
-  line-height: 1.5;
+  font-weight: 400;
 
   @media (max-width: em(972)) {
     font-size: 24px;
@@ -160,7 +138,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
 
   @media (max-width: em(972)) {
     flex-direction: column;
@@ -170,7 +148,7 @@
 }
 
 .excursion__info {
-  max-width: 690px;
+  max-width: 585px;
 
   @media (max-width: em(1280)) {
     max-width: 542px;
@@ -186,10 +164,34 @@
 }
 
 .excursion__wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    top: -60px;
+    left: 80px;
+    background-image: url('@img/decor/bagel.svg');
+    width: 64px;
+    height: 64px;
+  }
+
+  &::after {
+    top: 12px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url('@img/decor/ball.svg');
+  }
 }
 
 .subtabs__menu {
@@ -201,13 +203,14 @@
 
 .subtabs__btn {
   padding: 8px 16px;
-  background-color: $blackLight;
+  background-color: $whiteBold;
   font-size: 16px;
   border-radius: 4px;
 
   &.active {
-    background-color: $accent;
-    color: $black;
+    background: $accent;
+    color: $white;
+    font-weight: 700;
   }
 
   @media (max-width: $mobileSmall) {
@@ -223,9 +226,40 @@
   }
 }
 
+.excursion__one {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.excursion__img {
+  width: 465px;
+  height: 465px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.excursion__button {
+  position: absolute;
+  left: 0;
+  box-shadow: 3px 3px 10px 5px #1f24480f;
+
+  &::after {
+    position: absolute;
+    top: -60px;
+    left: -52px;
+    z-index: -1;
+    width: 116px;
+    height: 124px;
+    background-image: url('@img/decor/btn-dots.svg');
+    content: '';
+  }
+}
+
 .subtabs__one {
   display: none;
-  line-height: 1.5;
 
   &.active {
     display: block;

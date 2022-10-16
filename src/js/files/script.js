@@ -30,6 +30,7 @@ const soundBtnsHandler = () => {
 
 const subtabsHandler = () => {
   const btns = document.querySelectorAll('.subtabs__btn');
+  const images = document.querySelectorAll('.excursion__one');
 
   btns?.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -47,6 +48,11 @@ const subtabsHandler = () => {
         btn.classList.remove('active');
       });
 
+      images.forEach((img) => {
+        img.classList.remove('active');
+      });
+
+      images[idx].classList.add('active');
       content[idx].classList.add('active');
       target.classList.add('active');
     });
