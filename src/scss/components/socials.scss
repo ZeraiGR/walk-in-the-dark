@@ -1,14 +1,16 @@
 .socials {
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
 
 .socials__link {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+	background-color: #DEE2E5;
+	border-radius: 50%;
 
   &--big {
     width: 36px;
@@ -16,35 +18,35 @@
 }
 
 .socials__icon {
-  fill: $whiteBold;
+  fill: $white;
   transition: fill 0.3s ease;
 
   &:hover {
-    fill: $accent;
+    fill: #F13780;
   }
 
   &--facebook {
-    width: 10px;
-    height: 18px;
+    width: 8px;
+    height: 15px;
   }
 
   &--vk {
-    width: 24px;
-    height: 14px;
+    width: 20px;
+    height: 12px;
   }
 
   &--advisor {
-    width: 36px;
-    height: 23px;
+    width: 24px;
+    height: 15px;
   }
 
   &--insta {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
   }
 
   &--youtube {
-    width: 24px;
-    height: 17px;
+    width: 20px;
+    height: 14px;
   }
 }
