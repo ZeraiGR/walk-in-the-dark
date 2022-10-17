@@ -2,6 +2,17 @@
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
 
+import "./../libs/jquery.js";
+import "./../libs/jQuery-Marquee.js";
+
+if (document.querySelector('.runline')) {
+	$('.runline').marquee({
+		duration: 25000,
+		startVisible: true,
+		duplicated: true,
+});
+}
+
 export function headerFixed() {
   const header = document.querySelector('.header'),
     windowHeight = document.documentElement.clientHeight,
