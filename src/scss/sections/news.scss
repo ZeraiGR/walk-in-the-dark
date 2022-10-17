@@ -1,17 +1,21 @@
 .news {
   &--main {
-    margin-bottom: 120px;
+    padding: 120px 0 110px;
+
+		.news__swiper {
+			margin-bottom: 40px;
+		}
 
     @media (max-width: em(1280)) {
-      margin-bottom: 95px;
+      // margin-bottom: 95px;
     }
 
     @media (max-width: em(768)) {
-      margin-bottom: 80px;
+      // margin-bottom: 80px;
     }
 
     @media (max-width: $mobileSmall) {
-      margin-bottom: 60px;
+      // margin-bottom: 60px;
     }
   }
 
@@ -139,6 +143,12 @@
     gap: 15px;
   }
 }
+
+.news__buttons {
+	display: flex;
+	gap: 20px;
+}
+
 
 .news__main {
   display: flex;

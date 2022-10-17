@@ -1,6 +1,22 @@
-<section class="news news--main decor decor--top-left-r">
+<section class="news news--main">
 	<div class="news__container">
-		<h1 class="news__title title title--h2">Новости</h1>
+		<div class="news__top">
+			<h1 class="news__title title">Новости</h1>
+
+			<div class="news__buttons">
+				<button class="news__prev slider__prev" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
+
+				<button class="news__next slider__next" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
 
 		<div class="news__slider">
 			<ul class="news__swiper">
@@ -13,36 +29,25 @@
 				</li>
 
 				<li class="news__slide">
-					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-3.jpg"})
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-1.jpg"})
 				</li>
 
 				<li class="news__slide">
-					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-4.jpg"})
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-2.jpg"})
 				</li>
 
 				<li class="news__slide">
-					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-5.jpg"})
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-1.jpg"})
 				</li>
 
 				<li class="news__slide">
-					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-6.jpg"})
+					@@include('../components/_product--news.htm', {"imgUrl": "img/news/news-2.jpg"})
 				</li>
 
 			</ul>
-		</div>
 
-		<div class="news__prev slider__prev">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
+			<div class="news__pagination slider__pagination"></div>
 		</div>
-
-		<div class="news__next slider__next">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-
 		<a class="news__button button button--l button--ghost" href="#">
 			смотреть все новости
 		</a>

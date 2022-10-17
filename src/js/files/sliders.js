@@ -174,7 +174,7 @@ function initSliders() {
       observeParents: true,
       spaceBetween: 27,
       speed: 800,
-      slidesPerView: 3,
+      slidesPerView: 2,
       // centeredSlides: true,
       //touchRatio: 0,
       //simulateTouch: false,
