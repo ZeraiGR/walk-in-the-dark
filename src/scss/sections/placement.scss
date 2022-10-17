@@ -1,6 +1,6 @@
 .placement {
   position: relative;
-  padding: 32px 0;
+  padding: 110px 0;
   background-image: url('@img/decor/map.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -119,10 +119,11 @@
 }
 
 .placement__info {
-  padding: 40px;
-  max-width: 475px;
-  background-color: $blackLight;
+  padding: 40px 40px 50px;
+  max-width: 525px;
+  background-color: $whiteBold;
   border-radius: 16px;
+	box-shadow: 3px 3px 10px 5px #1f24480f;
 
   @media (max-width: $mobile) {
     padding: 32px 24px;
@@ -171,7 +172,7 @@
   line-height: 1.5;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &::before {
@@ -187,11 +188,13 @@
       top: 4px;
       width: 18px;
       height: 24px;
-      background-image: url('@img/icons/location.svg');
+      background-image: url('@img/icons/location-big.svg');
     }
   }
 
   &--phone {
+		font-size: 16px;
+
     &::before {
       top: 50%;
       transform: translateY(-50%);
@@ -243,8 +246,8 @@
   gap: 8px;
 
   &--arbat {
-    top: 57%;
-    left: 44%;
+    top: 25%;
+    left: 50%;
 
     @media (max-width: em(1100)) {
       top: 58%;
@@ -285,10 +288,10 @@
   visibility: hidden;
   pointer-events: none;
   padding: 8px 16px;
-  background-color: $blackLight;
+  background-color: $whiteBold;
   border-radius: 6px;
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 16px;
+	box-shadow: 3px 3px 10px 5px #1f24480f;
 
   &.show {
     opacity: 1;
@@ -313,6 +316,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+	box-shadow: 3px 3px 10px 5px #1f24480f;
 }
 
 .placement__close-icon {
