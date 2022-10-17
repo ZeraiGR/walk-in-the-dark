@@ -1,12 +1,24 @@
 <section class="testimonials">
 	<div class="testimonials__container">
-		<h2 class="testimonials__title title title--h2">
-			Отзывы тех, кто уже был в нашем музее
-		</h2>
 
-		<a class="testimonials__subtitle" href="#">
-			Больше отзывов вы найдете на сайте
-		</a>
+		<div class="testimonials__info">
+			<h2 class="testimonials__title title">
+				<strong>Отзывы</strong> наших клиентов
+			</h2>
+
+			<p class="testimonials__descr">
+				Мы стараемся прислушиваться к Вашим советам и замечаниям. Благодаря Вам проект Сенсориум становится лучше с
+				каждым днем!
+			</p>
+
+			<a class="testimonials__subtitle" href="#">
+				Больше отзывов вы найдете на сайте
+			</a>
+
+			<a class="testimonials__button button button--l" href="#">
+				Забронировать экскурсию
+			</a>
+		</div>
 
 		<div class="testimonials__slider">
 			<ul class="testimonials__swiper">
@@ -14,13 +26,13 @@
 					@@include('../components/_review.htm', {})
 				</li>
 				<li class="testimonials__slide">
-					@@include('../components/_review.htm', {})
+					@@include('../components/_review-2.htm', {})
 				</li>
 				<li class="testimonials__slide">
 					@@include('../components/_review.htm', {})
 				</li>
 				<li class="testimonials__slide">
-					@@include('../components/_review.htm', {})
+					@@include('../components/_review-2.htm', {})
 				</li>
 				<li class="testimonials__slide">
 					@@include('../components/_review.htm', {})
@@ -29,21 +41,5 @@
 
 			<div class="testimonials__pagination slider__pagination"></div>
 		</div>
-
-		<div class="testimonials__prev slider__prev">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-
-		<div class="testimonials__next slider__next">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-
-		<a class="testimonials__button button button--l" href="#">
-			Забронировать экскурсию
-		</a>
 	</div>
 </section>

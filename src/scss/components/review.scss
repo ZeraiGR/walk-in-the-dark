@@ -1,9 +1,11 @@
 .review {
-  padding: 32px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  background-color: $blackLight;
-  border-radius: 16px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px 5px #1f24480f;
+  background-color: $white;
+  transition: background-color 0.4s ease;
 
   @media (max-width: $mobileSmall) {
     padding: 24px 20px;
@@ -11,7 +13,7 @@
 }
 
 .review__top {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +34,7 @@
   .mini-rating__icon {
     width: 18px;
     height: 18px;
-    fill: $greyLight;
+    fill: $grey;
   }
 
   li {
@@ -43,7 +45,7 @@
 
   li.active {
     .mini-rating__icon {
-      fill: $accent;
+      fill: #f13780;
     }
   }
 }
@@ -64,10 +66,8 @@
 }
 
 .review__text {
-  margin-bottom: 30px;
-  height: 160px;
+  margin-bottom: 40px;
   line-height: 1.5;
-  @include cut-text(6);
 
   @media (max-width: em(1280)) {
     font-size: 16px;
@@ -79,9 +79,26 @@
 }
 
 .review__date {
-  margin-top: auto;
   font-size: 14px;
-  color: $greyThin;
+  color: $black;
+}
+
+.review__video {
+  margin-bottom: 40px;
+  position: relative;
+  text-decoration: underline;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-image: url('@img/icons/video-play-accent.svg');
+    content: '';
+  }
 }
 
 // user
@@ -89,7 +106,7 @@
 .user {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .user__avatar {
@@ -107,7 +124,8 @@
 .user__name {
   margin-bottom: 2px;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1;
+  font-family: 'Gilroy', sans-serif;
 
   @media (max-width: $mobileSmall) {
     font-size: 16px;
@@ -116,5 +134,8 @@
 
 .user__location {
   font-size: 12px;
-  color: $greyThin;
+  color: $black;
+  opacity: 0.5;
+  font-weight: 500;
+  font-family: 'Gilroy', sans-serif;
 }
