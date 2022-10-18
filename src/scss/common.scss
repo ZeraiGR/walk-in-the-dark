@@ -206,11 +206,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: $accent;
   cursor: pointer;
+
+	@media (max-width:$mobile){
+		width: 64px;
+		height: 64px;
+	}
 }
 
 .play-btn__icon {
