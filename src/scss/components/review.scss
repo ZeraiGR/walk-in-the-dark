@@ -20,7 +20,7 @@
   gap: 20px;
 
   @media (max-width: $mobileSmall) {
-    flex-direction: column;
+		margin-bottom: 16px;
     align-items: flex-start;
     gap: 16px;
   }
@@ -67,13 +67,13 @@
 
 .review__text {
   margin-bottom: 40px;
-  line-height: 1.5;
 
   @media (max-width: em(1280)) {
     font-size: 16px;
   }
 
   @media (max-width: $mobile) {
+		margin-bottom: 24px;
     font-size: 14px;
   }
 }
@@ -81,6 +81,10 @@
 .review__date {
   font-size: 14px;
   color: $black;
+
+	@media (max-width:$mobileSmall){
+		font-size: 12px;
+	}
 }
 
 .review__video {
@@ -98,7 +102,17 @@
     background-repeat: no-repeat;
     background-image: url('@img/icons/video-play-accent.svg');
     content: '';
+
+		@media (max-width: em(1280)){
+			width: 48px;
+			height: 48px;
+			background-size: cover;
+		}
   }
+
+	@media (max-width: em(1280)){
+		font-size: 14px;
+	}
 }
 
 // user
@@ -127,15 +141,23 @@
   line-height: 1;
   font-family: 'Gilroy', sans-serif;
 
-  @media (max-width: $mobileSmall) {
-    font-size: 16px;
-  }
+  @media (max-width: em(1280)){
+		font-size: 16px;
+	}
+
+	@media (max-width:$mobileSmall){
+		font-size: 14px;
+	}
 }
 
 .user__location {
-  font-size: 12px;
+  font-size: 14px;
   color: $black;
   opacity: 0.5;
   font-weight: 500;
   font-family: 'Gilroy', sans-serif;
+
+	@media (max-width:$mobileSmall){
+		font-size: 12px;
+	}
 }

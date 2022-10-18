@@ -752,20 +752,6 @@
   }
 }
 
-// testimonials
-
-.testimonials__slide {
-  transition: opacity 0.3s;
-
-  @media (max-width: $mobile) {
-    opacity: 0.5;
-
-    &.swiper-slide-active {
-      opacity: 1;
-    }
-  }
-}
-
 // master
 
 .master__card {

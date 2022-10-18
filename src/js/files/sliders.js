@@ -156,6 +156,9 @@ function initSliders() {
           spaceBetween: 16,
           slidesPerView: 'auto',
         },
+				560: {
+					slidesPerView: 2,
+				},
         880: {
           spaceBetween: 20,
         },
@@ -178,7 +181,7 @@ function initSliders() {
       observeParents: true,
       spaceBetween: 27,
       speed: 800,
-      slidesPerView: 2,
+			slidesPerView: 2,
       // centeredSlides: true,
       //touchRatio: 0,
       //simulateTouch: false,
@@ -199,6 +202,9 @@ function initSliders() {
           spaceBetween: 16,
           slidesPerView: 'auto',
         },
+				560: {
+					slidesPerView: 2,
+				},
         880: {
           spaceBetween: 20,
         },
