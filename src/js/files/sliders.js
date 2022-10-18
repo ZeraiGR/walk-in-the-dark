@@ -59,7 +59,6 @@ function initSliders() {
 			*/
       observer: true,
       observeParents: true,
-      spaceBetween: 27,
       speed: 800,
       slidesPerView: 'auto',
       //touchRatio: 0,
@@ -80,15 +79,20 @@ function initSliders() {
       breakpoints: {
         320: {
           slidesPerView: 'auto',
-          spaceBetween: 16,
+          spaceBetween: 19,
           // autoHeight: true,
         },
         768: {
           // spaceBetween: 27,
+					spaceBetween: 19,
         },
         992: {
           // slidesPerView: 3,
+					spaceBetween: 19,
         },
+				1280: {
+					spaceBetween: 30
+				}
       },
       on: {},
     });
