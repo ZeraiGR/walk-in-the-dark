@@ -269,6 +269,7 @@
 
 			@media (max-width:$mobileSmall){
 				grid-auto-rows: 100px;
+				gap: 16px 17px;
 			}
     }
 
@@ -279,6 +280,10 @@
 
       img {
         border-radius: 16px;
+
+				@media (max-width:$mobileSmall){
+					border-radius: 8px;
+				}
       }
 
       &:nth-child(2) {

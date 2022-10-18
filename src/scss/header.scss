@@ -196,7 +196,7 @@
   @media (max-width: em(1230)) {
     position: fixed;
     z-index: 10;
-    top: 62px;
+    top: 60px;
     left: 0;
     transform: translateX(-100%);
     flex-direction: column;
@@ -204,7 +204,7 @@
     justify-content: flex-start;
     padding: 40px 40px 80px;
     width: 100%;
-    height: calc(100% - 62px);
+    height: calc(100% - 60px);
     background-color: $white;
     overflow-y: auto;
     gap: 60px;
