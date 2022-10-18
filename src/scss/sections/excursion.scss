@@ -6,20 +6,31 @@
 
     .excursion__wrapper {
       justify-content: flex-end;
+
+			@media (max-width: em(1200)){
+				justify-content: center;
+			}
+
+			@media (max-width:$mobile){
+				justify-content: flex-end;
+			}
+
+			@media (max-width: em(630)){
+				justify-content: center;
+			}
     }
 
-    .excursion__info {
-      @media (max-width: $mobile) {
-        padding: 0 20px;
-      }
-    }
+		@media (max-width: em(1200)){
+			margin-bottom: 95px;
+		}
 
     @media (max-width: em(972)) {
+			margin-bottom: 80px;
       background-image: none;
     }
 
     @media (max-width: em(767)) {
-      margin-bottom: 0;
+      margin-bottom: 60px;
     }
   }
 
@@ -29,14 +40,6 @@
 
     .excursion__info {
       padding: 215px 0;
-
-      @media (max-width: em(972)) {
-        padding: 0 40px;
-      }
-
-      @media (max-width: $mobile) {
-        padding: 0 20px;
-      }
     }
 
     .excursion__descr {
@@ -81,8 +84,11 @@
   background-image: url('@img/icons/stopwatch.svg');
   background-repeat: no-repeat;
 
+	@media (max-width: em(972)){
+		margin-bottom: 24px;
+	}
+
   @media (max-width: $mobileSmall) {
-    margin-bottom: 20px;
     padding-left: 56px;
     background-size: 35px;
   }
@@ -105,31 +111,33 @@
 
   @media (max-width: em(972)) {
     margin-bottom: 30px;
+		font-size: 40px;
   }
+
+	@media (max-width: em(630)){
+		margin-bottom: 24px;
+		font-size: 30px;
+	}
 }
 
 .excursion__duration {
   font-size: 30px;
   font-weight: 400;
 
-  @media (max-width: em(972)) {
-    font-size: 24px;
-  }
-
   @media (max-width: $mobileSmall) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 .excursion__descr {
   margin-bottom: 40px;
-  line-height: 1.5;
 
   @media (max-width: em(1280)) {
     font-size: 16px;
   }
 
   @media (max-width: $mobileSmall) {
+		margin-bottom: 24px;
     font-size: 14px;
   }
 }
@@ -140,19 +148,26 @@
   justify-content: space-between;
   gap: 40px;
 
-  @media (max-width: em(972)) {
-    flex-direction: column;
-    gap: 0;
-    margin: 0 -20px;
+  @media (max-width: em(1200)) {
+    flex-direction: column-reverse;
+		gap: 70px;
   }
+
+	@media (max-width: em(630)){
+		gap: 25px;
+	}
 }
 
 .excursion__info {
   max-width: 585px;
 
   @media (max-width: em(1280)) {
-    max-width: 542px;
+    max-width: 462px;
   }
+
+	@media (max-width: em(1200)){
+		max-width: 100%;
+	}
 
   @media (max-width: em(972)) {
     max-width: 100%;
@@ -183,6 +198,23 @@
     background-image: url('@img/decor/bagel.svg');
     width: 64px;
     height: 64px;
+
+		@media (max-width: em(1200)){
+			left: 22%;
+		}
+
+		@media (max-width:$mobile){
+			left: 30%;
+		}
+
+		@media (max-width: em(630)){
+			z-index: -1;
+			top: 0;
+			left: 20px;
+			width: 116px;
+    	height: 124px;
+    	background-image: url('@img/decor/btn-dots.svg');
+		}
   }
 
   &::after {
@@ -191,7 +223,25 @@
     width: 22px;
     height: 22px;
     background-image: url('@img/decor/ball.svg');
+
+		@media (max-width: em(1200)){
+			right: 28%;
+		}
+
+		@media (max-width:$mobile){
+			right: 0;
+		}
+
+		@media (max-width: em(630)){
+			top: -23px;
+			right: 0;
+			width: 43px;
+			height: 43px;
+			background-image: url('@img/decor/bagel-mobile.svg');
+		}
   }
+
+
 }
 
 .subtabs__menu {
@@ -232,6 +282,24 @@
   &.active {
     display: block;
   }
+
+	@media (max-width: em(630)){
+		position: relative;
+		width: 450px;
+	}
+
+	@media (max-width: em(525)){
+		width: 285px;
+	}
+}
+
+.excursion__helper {
+	display: none;
+
+	@media (max-width: em(630)){
+		display: block;
+		padding-bottom: 100%;
+	}
 }
 
 .excursion__img {
@@ -239,6 +307,19 @@
   height: 465px;
   border-radius: 50%;
   overflow: hidden;
+
+	@media (max-width: em(1280)){
+		width: 425px;
+		height: 425px;
+	}
+
+	@media (max-width: em(630)){
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .excursion__button {
@@ -255,7 +336,35 @@
     height: 124px;
     background-image: url('@img/decor/btn-dots.svg');
     content: '';
+
+		@media (max-width:$mobile){
+			left: 25px;
+		}
+
+		@media (max-width: em(630)){
+			background-image: none;
+		}
   }
+
+	@media (max-width: em(1280)){
+		left: -120px;
+	}
+
+	@media (max-width: em(1200)){
+		left: 60px;
+	}
+
+	@media (max-width:$mobile){
+		left: 85px;
+	}
+
+	@media (max-width: em(630)){
+		z-index: 2;
+		padding: 10px;
+		font-size: 12px;
+		left: 0;
+		bottom: 20%;
+	}
 }
 
 .subtabs__one {
@@ -269,7 +378,7 @@
     font-size: 16px;
   }
 
-  @media (max-width: $mobile) {
-    font-size: 14px;
-  }
+	@media (max-width:$mobileSmall){
+		font-size: 14px;
+	}
 }
