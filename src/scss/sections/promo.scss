@@ -702,6 +702,10 @@
 
     .promo__title {
       max-width: 100%;
+
+			@media (max-width:$mobile){
+				line-height: 1.3;
+			}
     }
 
     .promo__content {
