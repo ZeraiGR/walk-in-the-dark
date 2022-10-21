@@ -1,37 +1,29 @@
 .gift {
-  margin-bottom: 120px;
-  line-height: 1.5;
+  margin: 190px 0 120px;
 
   @media (max-width: em(1280)) {
-    margin-bottom: 95px;
+    margin: 155px 0 95px;
   }
 
   @media (max-width: $mobile) {
-    margin-bottom: 80px;
+    margin: 140px 0 80px;
   }
 
   @media (max-width: $mobileSmall) {
-    margin-bottom: 60px;
+    margin: 100px 0 60px;
   }
-}
-
-.gift__container {
 }
 
 .gift__title {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   text-align: center;
-
-  @media (max-width: $mobile) {
-    font-size: 30px;
-  }
 }
 
 .gift__descr {
   margin: 0 auto 40px;
   max-width: 945px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 
   @media (max-width: em(1280)) {
     margin-bottom: 30px;
@@ -42,25 +34,24 @@
 .gift__content {
   display: flex;
   align-items: center;
-  gap: 30px;
 
   @media (max-width: em(972)) {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
   }
 }
 
 .gift__img {
-  object-fit: cover;
+  object-fit: contain;
 
   @media (max-width: em(1280)) {
-    max-width: 310px;
-    height: 175px;
+    max-width: 410px;
+    height: 375px;
   }
 
   @media (max-width: em(972)) {
-    max-width: 430px;
-    height: 245px;
+    max-width: 530px;
+    height: 345px;
   }
 
   @media (max-width: em(630)) {
@@ -111,7 +102,6 @@
   margin-bottom: 10px;
   display: block;
   text-transform: uppercase;
-  font-family: 'Monda', sans-serif;
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 3px;
@@ -227,17 +217,20 @@
     }
   }
 
+	div.pricelist__price {
+		strong {
+			font-size: 18px;
+		}
+	}
+
   @media (max-width: em(630)) {
     margin-bottom: 30px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.pricelist__logo {
-}
-
 .gift__button {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   display: block;
   max-width: max-content;
 
@@ -252,9 +245,6 @@
   }
 }
 
-.gift__spollers {
-}
-
 .gift-spollers__item {
   .spollers__title {
     position: relative;
@@ -267,12 +257,12 @@
       position: absolute;
       right: 0;
       top: 50%;
-      width: 15px;
-      height: 10px;
+      width: 12px;
+      height: 7px;
       transform: translateY(-50%);
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('@img/icons/angle-bottom-white.svg');
+      background-image: url('@img/icons/angle-bottom.svg');
       transition: transform 0.3s ease;
       content: '';
     }
@@ -282,8 +272,5 @@
         transform: rotate(180deg) translateY(100%);
       }
     }
-  }
-
-  .spollers__body {
   }
 }
