@@ -29,7 +29,7 @@
   }
 
   a {
-    color: $greyLight;
+    color: $black;
     transition: color 0.3s ease;
 
     &:hover {
@@ -38,7 +38,7 @@
   }
 
   span {
-    color: $whiteBold;
+    color: #828282;
 
     @media (max-width: $mobileSmall) {
       font-size: 12px;
@@ -68,5 +68,5 @@
 .breadcrumbs__icon {
   width: 4px;
   height: 8px;
-  fill: $greyLight;
+  fill: $black;
 }
