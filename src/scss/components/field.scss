@@ -23,15 +23,15 @@
 .field__input,
 .field__textarea {
   padding: 11px 16px;
-  border: 1px solid #4f4f4f;
-  background-color: $grey;
+  border: 1px solid $grey;
+  background-color: $white;
   border-radius: 2px;
-  color: $white;
+  color: $black;
   font-size: 16px;
   line-height: 1.5;
 
   &::placeholder {
-    color: $whiteBold;
+    color: #a8a8a8;
   }
 
   &:focus {

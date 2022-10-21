@@ -54,9 +54,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.booking__form {
-}
-
 .booking__start {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
@@ -263,8 +260,11 @@
   margin-bottom: 25px;
   padding-left: 40px;
   text-transform: uppercase;
+	font-weight: 700;
   font-size: 12px;
-  color: $accent;
+	background: linear-gradient(144.39deg, #e9277c 0%, #f03482 0.01%, #ff783e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   &::before {
     position: absolute;
@@ -277,7 +277,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('@img/icons/clock.svg');
+    background-image: url('@img/icons/stopwatch.svg');
   }
 
   @media (max-width: $mobile) {
@@ -308,8 +308,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  background-color: $blackLight;
+  background-color: $whiteBold;
   border-radius: 16px;
+	box-shadow: 0 4px 4px 0 #00000040;
 
   @media (max-width: em(1280)) {
     padding: 30px 30px 40px;
@@ -397,7 +398,9 @@
   margin-bottom: 15px;
   display: block;
   font-size: 16px;
-  color: $accent;
+  background: linear-gradient(144.39deg, #e9277c 0%, #f03482 0.01%, #ff783e 100%);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .booking__field {
@@ -410,9 +413,6 @@
       }
     }
   }
-}
-
-.field__input {
 }
 
 .booking__detail {
@@ -428,6 +428,9 @@
 
 .booking__button {
   display: block;
+	padding: 15px 32px;
+	font-size: 16px;
+	line-height: 1;
 
   @media (max-width: $mobileSmall) {
     font-size: 12px;
@@ -436,9 +439,9 @@
 
 .booking__result {
   padding: 40px 30px 35px;
-  background-color: #fff3c1;
+  background: $accent;
   border-radius: 16px;
-  color: $black;
+  color: $white;
 
   .booking__heading {
     @media (max-width: em(1280)) {
@@ -510,7 +513,10 @@
 }
 
 .booking__submit {
-  margin-bottom: 15px;
+	background: $white;
+  margin-bottom: 16px;
+	color: #f03482;
+	font-size: 16px;
 
   @media (max-width: $mobileSmall) {
     font-size: 12px;
