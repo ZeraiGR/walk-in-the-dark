@@ -15,12 +15,8 @@
 }
 
 .booking__title {
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   text-align: center;
-
-  @media (max-width: $mobile) {
-    margin-bottom: 30px;
-  }
 }
 
 .booking__info {
@@ -50,10 +46,12 @@
 
 .booking__accent {
   display: block;
-  font-size: 20px;
-  color: $accent;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+	background: linear-gradient(144.39deg, #e9277c 0%, #f03482 0.01%, #ff783e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .booking__form {
@@ -129,13 +127,14 @@
 
   &--default {
     .box {
-      background-color: $grey;
+      background-color: #79B7E5;
+			
     }
   }
 
   &--nightwalking {
     .box {
-      background-color: #4232ff;
+      background-color: $yellow;
     }
 
     .booking__clue-descr {
@@ -156,8 +155,12 @@
 
   &--sold {
     .box {
-      border: 1px solid $greyLight;
-      background-color: transparent;
+      border: 1px solid #CDE2F2;
+      background-color: #CDE2F2;
+
+			&::after {
+				background-color: #79B7E5;
+			}
     }
   }
 
@@ -175,6 +178,7 @@
   font-weight: 700;
   font-size: 20px;
   text-align: center;
+	color: $white;
 
   &::after {
     position: absolute;
@@ -182,7 +186,7 @@
     transform: translateY(-50%);
     height: 1px;
     width: 100%;
-    background-color: $greyLight;
+    background-color: $white;
     content: '';
   }
 
@@ -511,7 +515,4 @@
   @media (max-width: $mobileSmall) {
     font-size: 12px;
   }
-}
-
-.field__checkbox {
 }

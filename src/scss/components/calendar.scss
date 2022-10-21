@@ -1,8 +1,8 @@
 .calendar {
   border-radius: 16px;
   overflow: hidden;
-  background-color: $blackLight;
-  line-height: 1.5;
+  background-color: $white;
+	box-shadow: 3px 3px 10px 5px #1f24480f;
 }
 
 .calendar__month {
@@ -10,18 +10,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $accent;
-  color: $black;
+  background: $accent;
+  color: $white;
+	text-transform: uppercase;
   font-weight: 900;
-  font-family: 'Mont', sans-serif;
 }
 
 .calendar__content {
-  padding: 24px 16px;
+  padding: 24px 16px 12px;
 }
 
 .calendar__weekdays {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   display: flex;
 
   li {
@@ -29,6 +29,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
+		font-family: 'Arial', sans-serif;
   }
 }
 
@@ -39,7 +40,7 @@
 
   div {
     width: calc(100% / 7);
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,13 +52,13 @@
 
     &:hover,
     &.today {
-      background-color: $accent;
-      color: $black;
+      background-color: $yellow;
+      color: $white;
     }
 
     &.prev-date,
     &.next-date {
-      color: $greyLight;
+      color: $greyThin;
       pointer-events: none;
     }
   }
@@ -65,68 +66,31 @@
 
 .calendar__menu {
   padding-top: 12px;
-  border-top: 1px solid $greyLight;
+  border-top: 1px solid $grey;
   display: flex;
   justify-content: space-between;
 }
 
 .calendar__button {
   text-transform: uppercase;
-  color: $accent;
   font-size: 12px;
   font-weight: 700;
+	background: linear-gradient(144.39deg, #e9277c 0%, #f03482 0.01%, #ff783e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .calendar__btn {
   width: 22px;
   height: 22px;
   background-image: url('@img/icons/calendar-angle.svg');
-  background-size: 6px 12px;
+  background-size: 8px 14px;
   background-repeat: no-repeat;
   background-position: center;
 
   &--prev {
     transform: rotate(180deg);
   }
-
-  &--next {
-  }
-}
-
-.prev {
-}
-
-.date {
-}
-
-.date__month {
-}
-
-.date__year {
-}
-
-.next {
-}
-
-.calendar__months {
-}
-
-.calendar__weekdays {
-}
-
-.calendar__days {
-}
-
-.prev-date {
-}
-
-.next-date {
-}
-
-.calendar__menu {
-}
-
-.calendar__button {
 }
 
 .calendar__months {
