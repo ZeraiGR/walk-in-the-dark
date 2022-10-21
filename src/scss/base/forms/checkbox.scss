@@ -1,6 +1,21 @@
 .checkbox {
   position: relative;
 
+	&--accent {
+		.checkbox__label {
+			&::before {
+				background: $accent;
+			}
+		}
+
+		.checkbox__input {
+			&:checked + .checkbox__label:before {
+				background-color: #f13780;
+				background-image: url('@img/icons/check-icon-white.svg');
+			}
+		}
+	}
+
   &:not(:last-child) {
     margin-bottom: em(5);
   }

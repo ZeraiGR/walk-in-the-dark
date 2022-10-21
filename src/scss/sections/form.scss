@@ -49,16 +49,22 @@
       margin-bottom: 80px;
     }
 
+		.form__info {
+        padding: 60px 80px;
+				
+				@media (max-width:$mobileSmall){
+					padding: 30px 20px;
+				}
+      }
+
+		.form__img {
+			@media (max-width:$mobileSmall){
+				height: 220px;
+			}
+    }
+		
     @media (max-width: $mobileSmall) {
       margin-bottom: 60px;
-
-      .form__info {
-        padding: 30px 20px;
-      }
-
-      .form__img {
-        height: 220px;
-      }
     }
   }
 
@@ -216,7 +222,7 @@
 .form__content {
   display: flex;
   border-radius: 16px;
-  background-color: $blackLight;
+  background-color: $whiteBold;
   overflow: hidden;
 
   @media (max-width: em(768)) {
@@ -238,7 +244,7 @@
 
 .form__title {
   margin-bottom: 20px;
-  line-height: 1.5;
+	font-size: 40px;
 
   @media (max-width: em(1280)) {
     font-size: 24px;
