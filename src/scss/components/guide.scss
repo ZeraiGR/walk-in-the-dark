@@ -2,6 +2,7 @@
   display: flex;
   gap: 40px;
   padding: 48px 64px 52px;
+	background-color: $whiteBold;
 
   @media (max-width: em(1280)) {
     padding: 48px;
@@ -19,8 +20,42 @@
 }
 
 .guide__promo {
+	position: relative;
   width: 280px;
   flex: none;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		background-repeat: no-repeat;
+	}
+
+	&::before {
+		top: -13px;
+		left: -25px;
+		width: 40px;
+		height: 40px;
+		background-image: url('@img/decor/bagel-mobile.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@media (max-width:$mobile){
+			display: none;
+		}
+	}
+
+	&::after {
+		top: 35px;
+		right: -14px;
+		width: 14px;
+		height: 14px;
+		background-image: url('@img/decor/smallball.svg');
+
+		@media (max-width:$mobile){
+			display: none;
+		}
+	}
 
   @media (max-width: em(768)) {
     width: 100%;
