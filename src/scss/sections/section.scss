@@ -50,24 +50,6 @@
   }
 }
 
-.section__title {
-  margin-bottom: 40px;
-
-  @media (max-width: em(1200)) {
-    font-size: 36px;
-  }
-
-  @media (max-width: em(1024)) {
-    margin-bottom: 35px;
-    font-size: 30px;
-  }
-
-  @media (max-width: em(630)) {
-    margin-bottom: 30px;
-    font-size: 24px;
-  }
-}
-
 .section__list {
   margin-bottom: 40px;
 

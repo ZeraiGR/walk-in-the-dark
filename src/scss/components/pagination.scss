@@ -24,13 +24,14 @@
     }
 
     a:hover {
-      background-color: $blackLight;
+      background-color: $yellow;
+      color: $white;
     }
 
     li.active {
       span {
-        color: $black;
-        background-color: $accent;
+        color: $white;
+        background: $accent;
       }
     }
   }
