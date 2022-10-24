@@ -443,6 +443,25 @@
 
 .video-preview {
   box-shadow: 0 16px 40px 0 #bbb6b626;
+
+	&.layer {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 16px;
+			content: "";
+		}
+
+		.play-btn {
+			z-index: 2;
+		}
+	}
 }
 
 @keyframes rotate {

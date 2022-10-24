@@ -146,11 +146,15 @@
 	}
 }
 
-.news__buttons {
+.news__nav {
 	display: flex;
 	gap: 20px;
 }
 
+.news__buttons {
+	display: flex;
+	gap: 20px;
+}
 
 .news__main {
   display: flex;
@@ -185,12 +189,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: $blackLight;
+    background-color: #dee2e5;
+		transition: background-color 0.3s ease;
 
     &:hover {
-      .news__socials-icon {
-        fill: $accent;
-      }
+      background-color: #e9277c;
     }
   }
 }
@@ -232,13 +235,11 @@
       margin-top: 0;
       margin-bottom: 16px;
       width: 100%;
-      border-radius: 4px;
+      border-radius: 16px;
     }
 
     figcaption {
       font-size: 20px;
-      font-weight: 700;
-      line-height: 1.5;
 
       @media (max-width: em(630)) {
         font-size: 16px;
@@ -248,16 +249,6 @@
     @media (max-width: em(630)) {
       grid-template-columns: 100%;
     }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 900;
-    text-transform: uppercase;
   }
 
   h2 {
@@ -318,7 +309,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: $accent;
+        background: $accent;
         content: '';
       }
 
@@ -383,8 +374,8 @@
     position: relative;
     margin: 30px 0;
     padding: 32px 48px;
-    font-style: italic;
-    background-color: $blackLight;
+    background: $accent;
+		color: $white;
 
     &::before {
       position: absolute;
@@ -395,7 +386,7 @@
       width: 6px;
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
-      background-color: $accent;
+      background-color: $yellow;
       content: '';
     }
 
@@ -577,11 +568,13 @@ ul.news__tags {
   padding-left: 34px;
   display: block;
   font-size: 14px;
-  color: $accent;
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: text-decoration 0.3s ease;
+	background: $accent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   &::before {
     position: absolute;
