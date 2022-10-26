@@ -237,6 +237,8 @@
     }
 
     .promo__title {
+			margin-bottom: 40px;
+
       @media (max-width: $mobile) {
         margin-bottom: 30px;
       }
@@ -244,7 +246,7 @@
 
     .promo__content {
       justify-content: space-between;
-      padding: 0 0 30px;
+      padding: 0 0 40px;
       gap: 50px;
 
       @media (max-width: em(1280)) {
@@ -286,6 +288,7 @@
 
     .promo__card {
       padding: 40px 20px;
+			text-align: center;
 
       @media (max-width: em(972)) {
         padding: 30px 20px;
@@ -300,7 +303,10 @@
     }
 
     .card__title {
-      font-size: 18px;
+			margin-bottom: 10px;
+      font-size: 16px;
+			display: block;
+			font-weight: 700;
 
       @media (max-width: em(972)) {
         font-size: 12px;
@@ -312,7 +318,7 @@
     }
 
     .card__descr {
-      font-size: 20px;
+      font-size: 18px;
 
       @media (max-width: $mobile) {
         grid-column: 2 / 3;
@@ -320,7 +326,7 @@
     }
 
     .promo__icon {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       width: 56px;
       height: 56px;
 
@@ -331,7 +337,7 @@
     }
 
     .promo__img {
-      max-width: 508px;
+      max-width: 550px;
 
       @media (max-width: em(1280)) {
         max-width: 332px;
