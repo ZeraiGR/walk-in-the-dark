@@ -12,6 +12,21 @@
 		}
 	}
 
+	&--dark {
+		.process__container {
+			max-width: 1230px;
+		}
+
+		.process__title {
+			margin-bottom: 0;
+		}
+
+		.process__top {
+			margin: 0 auto 40px;
+			max-width: 1200px;
+		}
+	}
+
   @media (max-width: em(1280)) {
     margin-bottom: 95px;
   }
@@ -40,10 +55,6 @@
   @media (max-width: $mobile) {
     margin-bottom: 30px;
     font-size: 30px;
-  }
-
-  &--dark {
-    margin-bottom: 20px;
   }
 
   &--light {
@@ -153,8 +164,17 @@
   }
 }
 
+.process__top {
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+
 .process__slider {
-  margin-bottom: 120px;
+  margin-bottom: 25px;
+	padding: 15px;
 
   @media (max-width: em(1280)) {
     margin-bottom: 95px;
@@ -176,9 +196,11 @@
 .process__slide {
   display: flex;
   align-items: center;
+	gap: 40px;
+	padding: 64px 48px;
   border-radius: 16px;
   overflow: hidden;
-  line-height: 1.5;
+	box-shadow: 3px 3px 10px 5px #1f24480f;
 
   img {
     max-width: 380px;
@@ -213,8 +235,40 @@
   }
 }
 
+.process__image {
+	position: relative;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::before {
+		top: -13px;
+		left: -25px;
+		width: 40px;
+		height: 40px;
+		background-image: url('@img/decor/bagel-mobile.svg');
+	}
+
+	&::after {
+		top: 35px;
+		width: 14px;
+		height: 14px;
+		background-image: url('@img/decor/ball.svg');
+	}
+
+	img {
+		width: 280px;
+		height: 280px;
+		border-radius: 50%;
+	}
+}
+
 .process__info {
-  padding: 10px 63px 10px 40px;
 
   @media (max-width: em(972)) {
     padding: 20px 40px;
@@ -228,7 +282,6 @@
 .process__slide-name {
   margin-bottom: 32px;
   font-size: 24px;
-  font-weight: 700;
 
   @media (max-width: em(972)) {
     margin-bottom: 20px;
@@ -244,6 +297,11 @@
   @media (max-width: em(972)) {
     font-size: 14px;
   }
+}
+
+.process__btns {
+	display: flex;
+	gap: 20px;
 }
 
 .process__next,
@@ -311,9 +369,10 @@
 }
 
 .process__button {
-  margin: 0 auto 120px;
+  margin: 0 auto;
   display: block;
   max-width: max-content;
+	font-size: 16px;
 
   @media (max-width: em(1280)) {
     margin: 0 auto 95px;

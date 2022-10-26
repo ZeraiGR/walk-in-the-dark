@@ -1,49 +1,33 @@
-<section class="process">
+<section class="process process--dark">
 	<div class="process__container">
-		<h2 class="process__title title">
-			Как проходит обычное свидание
-		</h2>
 
-		<ul class="process__parts">
-			<li class="process__part card">
-				<img src="@img/products/product-2.jpg" alt="date">
-				<div class="process__box">
-					<h3 class="process__name">Свидание</h3>
-					<p class="process__descr">
-						Встречаетесь в ресторане или кафе - кушаете
-						цезарь и пьете мохито - разговоры ни о чем
-						и неуместные шутки из comedy club
-					</p>
-				</div>
-			</li>
+		<div class="process__top">
+			<h2 class="process__title title">
+				Как проходит свидание в темноте
+			</h2>
 
-			<li class="process__part card">
-				<img src="@img/products/product-1.jpg" alt="result">
+			<div class="process__btns">
+				<button class="process__prev slider__prev" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
 
-				<div class="process__box">
-					<h3 class="process__name">Результат</h3>
-					<p class="process__descr">
-						Такие свидания обычно быстро заканчиваются
-						и не приносят удовольствия вам, и вашей половине
-					</p>
-				</div>
-			</li>
-		</ul>
+				<button class="process__next slider__next" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
 
-		<h2 class="process__title process__title--dark title title--h3">
-			как проходит свидание в темноте
-		</h2>
-
-		<span class="process__subtitle">
-			За 45 минут в темной части вы пройдете 5 локаций
-		</span>
-	</div>
-
-	<div class="process__container slider__container">
 		<div class="process__slider">
 			<ul class="process__swiper">
-				<li class="process__slide card">
-					<img src="@img/decor/location-1.jpg" alt="location 1">
+				<li class="process__slide">
+					<div class="process__image">
+						<img src="@img/decor/location-1.jpg" alt="location 1">
+					</div>
+
 					<div class="process__info">
 						<h3 class="process__slide-name">Улица</h3>
 						<p class="process__slide-descr">
@@ -54,8 +38,11 @@
 					</div>
 				</li>
 
-				<li class="process__slide card">
-					<img src="@img/decor/location-1.jpg" alt="location 1">
+				<li class="process__slide">
+					<div class="process__image">
+						<img src="@img/decor/location-1.jpg" alt="location 1">
+					</div>
+
 					<div class="process__info">
 						<h3 class="process__slide-name">Комната</h3>
 						<p class="process__slide-descr">
@@ -66,8 +53,11 @@
 					</div>
 				</li>
 
-				<li class="process__slide card">
-					<img src="@img/decor/location-1.jpg" alt="location 1">
+				<li class="process__slide">
+					<div class="process__image">
+						<img src="@img/decor/location-1.jpg" alt="location 1">
+					</div>
+
 					<div class="process__info">
 						<h3 class="process__slide-name">Сувенирная лавка</h3>
 						<p class="process__slide-descr">
@@ -78,8 +68,11 @@
 					</div>
 				</li>
 
-				<li class="process__slide card">
-					<img src="@img/decor/location-1.jpg" alt="location 1">
+				<li class="process__slide">
+					<div class="process__image">
+						<img src="@img/decor/location-1.jpg" alt="location 1">
+					</div>
+
 					<div class="process__info">
 						<h3 class="process__slide-name">Спортивный зал</h3>
 						<p class="process__slide-descr">
@@ -94,60 +87,8 @@
 			<div class="process__pagination slider__pagination"></div>
 		</div>
 
-		<div class="process__prev slider__prev">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-
-		<div class="process__next slider__next">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-	</div>
-
-	<div class="process__container">
-
-		<h2 class="process__title title title--h3">
-			в результате
-		</h2>
-
-		<ul class="process__results">
-			<li class="process__result card">
-				<svg class="process__icon">
-					<use xlink:href="@img/sprite.svg#mind"></use>
-				</svg>
-
-				<p>
-					У вас будет шанс проявить все свои лучшие качества, для того чтобы лучше узнать друг друга, понять есть ли у
-					вас общие
-					интересы и темы для разговора
-				</p>
-			</li>
-
-			<li class="process__result card">
-				<svg class="process__icon">
-					<use xlink:href="@img/sprite.svg#partners"></use>
-				</svg>
-
-				<p>
-					Вы почувствуете свою вторую половину. Откроете в себе новые возможности,
-					о которых до этого не знали
-				</p>
-			</li>
-
-			<li class="process__result card">
-				<svg class="process__icon">
-					<use xlink:href="@img/sprite.svg#love"></use>
-				</svg>
-
-				<p>
-					Непривычные обстоятельства, помогут вам довериться своей второй половине и стать ближе, чтобы преодолеть все
-					трудности,
-					которые встретятся на вашем пути
-				</p>
-			</li>
-		</ul>
+		<a class="process__button button" href="#">
+			Забронировать свидание
+		</a>
 	</div>
 </section>
