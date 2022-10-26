@@ -1,30 +1,48 @@
 <section class="slider slider--guides">
 	<div class="slider__container">
 
-		<h2 class="slider__title title title--h2">
-			познакомьтесь с нашими гидами
-		</h2>
+		<div class="slider__top">
+			<h2 class="slider__title title">
+				Познакомьтесь с нашими гидами
+			</h2>
+
+			<div class="slider__nav">
+				<button class="guides__prev slider__prev" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
+
+				<button class="guides__next slider__next" type="button">
+					<svg class="slider__icon">
+						<use xlink:href="@img/sprite.svg#slider-angle"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+
 
 		<div class="guides__slider">
 			<ul class="guides__swiper">
 				<li class="guides__slide">
-					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-1.png"})
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-3.png"})
 				</li>
 
 				<li class="guides__slide">
-					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-4.png"})
 				</li>
 
 				<li class="guides__slide">
-					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-1.png"})
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-5.png"})
 				</li>
 
 				<li class="guides__slide">
-					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-3.png"})
 				</li>
 
 				<li class="guides__slide">
-					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-2.png"})
+					@@include('../components/_guide.htm', {"imgUrl": "img/guides/guide-4.png"})
 				</li>
 			</ul>
 
@@ -34,17 +52,5 @@
 		<a class="guides__button button button--l" href="#">
 			Забронировать экскурсию
 		</a>
-
-		<div class="guides__prev slider__prev">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
-
-		<div class="guides__next slider__next">
-			<svg class="slider__icon">
-				<use xlink:href="@img/sprite.svg#slider-arrow"></use>
-			</svg>
-		</div>
 	</div>
 </section>

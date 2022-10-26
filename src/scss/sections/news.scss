@@ -58,17 +58,21 @@
   }
 
   &--landing {
+		margin-top: 190px;
     margin-bottom: 120px;
 
     @media (max-width: em(1280)) {
+			margin-top: 155px;
       margin-bottom: 95px;
     }
 
     @media (max-width: em(768)) {
+			margin-top: 140px;
       margin-bottom: 80px;
     }
 
     @media (max-width: $mobileSmall) {
+			margin-top: 120px;
       margin-bottom: 60px;
     }
 
@@ -101,13 +105,9 @@
       }
     }
 
-    .news__pagination {
-      display: none;
-
-      @media (max-width: em(1140)) {
-        display: flex;
-      }
-    }
+		.news__swiper {
+			margin-bottom: 40px;
+		}
 
     .news__next,
     .news__prev {
