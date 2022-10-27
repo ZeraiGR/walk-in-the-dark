@@ -79,3 +79,57 @@
 		text-align: left;
 	}
 }
+
+.school__steps {
+  margin: 0 auto;
+	max-width: 730px;
+	display: flex;
+  flex-direction: column;
+  gap: 50px;
+  list-style: none;
+	counter-reset: timeline;
+
+  @media (max-width: $mobileSmall) {
+    gap: 20px;
+  }
+}
+
+.school__step {
+  position: relative;
+  padding-left: 78px;
+
+  &::before {
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background: $accent;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: $white;
+
+    counter-increment: timeline;
+    content: counter(timeline);
+  }
+
+  &:not(:last-child) {
+    &::after {
+      position: absolute;
+      top: 50px;
+      left: 23px;
+      width: 2px;
+      height: 110%;
+      background-color: $grey;
+      content: '';
+    }
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding-left: 68px;
+  }
+}
