@@ -1,3 +1,11 @@
+.price {
+	&--school {
+		.price__img {
+			max-width: 525px;
+		}
+	}
+}
+
 .price__title {
   margin-bottom: 16px;
   text-align: center;
