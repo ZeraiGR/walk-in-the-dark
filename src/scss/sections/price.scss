@@ -65,6 +65,60 @@
 			}
 		}
 	}
+
+	&--training {
+		margin-bottom: 120px;
+
+		.price__title {
+			margin-bottom: 40px;
+			line-height: 1;
+		}
+
+		.price__info {
+			max-width: 615px;
+		}
+
+		.price__img {
+			max-width: 525px;
+		}
+
+		.price__content {
+			margin-bottom: 0;
+		}
+
+		.pricelist {
+			margin-bottom: 24px;
+		}
+
+		.price__descr {
+			margin-bottom: 16px;
+			font-size: 18px;
+
+			strong {
+				text-transform: uppercase;
+				background: $accent;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+		.price__button {
+			margin-top: 40px;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: em(1280)){
+			margin-bottom: 95px;
+		}
+
+		@media (max-width:$mobile){
+			margin-bottom: 80px;
+		}
+
+		@media (max-width:$mobileSmall){
+			margin-bottom: 60px;
+		}
+	}
 }
 
 .price__title {

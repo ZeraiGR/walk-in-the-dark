@@ -16,7 +16,8 @@
 		}
 	}
 
-	&--dark {
+	&--dark,
+	&--training {
 		.process__container {
 			max-width: 1230px;
 		}
