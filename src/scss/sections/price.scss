@@ -2,6 +2,67 @@
 	&--school {
 		.price__img {
 			max-width: 525px;
+
+			@media (max-width: em(1280)){
+				max-width: 400px;
+				height: 390px;
+			}
+		}
+
+		.price__title,
+		.price__subtitle {
+			text-align: left;
+		}
+
+		.price__title {
+			line-height: 1;
+		}
+
+		.price__descr {
+			font-size: 18px;
+			text-align: left;
+
+			a {
+				background: $accent;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			@media (max-width:$mobileSmall){
+				font-size: 16px;
+			}
+		}
+
+		.pricelist {
+			grid-template-columns: repeat(3, 1fr);
+
+			@media (max-width: em(630)){
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		.pricelist__name {
+			font-family: 'Arial', sans-serif;
+		}
+
+		.pricelist__time {
+			justify-content: center;
+
+			strong {
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+		}
+
+		.pricelist__price {
+			strong,
+			span {
+				font-size: 18px;
+			}
+
+			span {
+				font-family: 'Arial', sans-serif;
+			}
 		}
 	}
 }

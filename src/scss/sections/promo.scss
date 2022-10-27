@@ -777,6 +777,10 @@
 		.promo__info {
 			margin-bottom: 0;
 			max-width: 585px;
+
+			@media (max-width: em(630)){
+				text-align: left;
+			}
 		}
 
 		.promo__content {
