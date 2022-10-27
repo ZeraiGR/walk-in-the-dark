@@ -2,7 +2,7 @@
 // Снипет (HTML): sel
 .select {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
 
   // .select__body
   &__body {
@@ -23,9 +23,15 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    height: 20px;
     justify-content: space-between;
     flex-direction: row-reverse;
+		padding: 11px 16px;
+		background-color: $white;
+    border: 1px solid #e4e4e4;
+    border-radius: 2px;
+    color: #19193c;
+    font-size: 16px;
+    line-height: 1.5;
 
     &:before {
       content: '';
@@ -58,13 +64,13 @@
   // .select__options
   &__options {
     position: absolute;
-    top: 30px;
-    padding: 8px 12px;
-    border-radius: 0 0 4px 4px;
+    top: 110%;
+    border-radius: 2px;
     min-width: 100%;
     left: 0;
-    background-color: $grey;
+    background-color: $white;
     border-radius: 4px;
+		box-shadow: 3px 3px 10px 5px #1f24480f;
   }
 
   // .select__scroll
@@ -84,10 +90,12 @@
   // .select__option
   &__option {
     width: 100%;
+		padding: 8px 12px;
     display: block;
     text-align: left;
     cursor: pointer;
     color: inherit;
+		min-height: 35px;
     text-transform: uppercase;
     line-height: 1.4;
 
@@ -101,7 +109,8 @@
 
     @media (any-hover: hover) {
       &:hover {
-        color: $accent;
+        background: $accent;
+				color: $white;
       }
     }
   }
