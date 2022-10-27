@@ -39,7 +39,7 @@
   }
 
   &--corporate {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 
     @media (max-width: em(1280)) {
       margin-bottom: 95px;
@@ -48,6 +48,10 @@
     @media (max-width: em(972)) {
       margin-bottom: 80px;
     }
+
+		.form__title {
+			line-height: 1;
+		}
 
 		.form__info {
         padding: 60px 80px;
