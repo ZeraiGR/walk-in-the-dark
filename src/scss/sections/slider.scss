@@ -248,6 +248,17 @@
     }
   }
 
+	&--partners {
+		.slider__title {
+			margin-bottom: 40px;
+			line-height: 1;
+
+			@media (max-width:$mobile){
+				margin-bottom: 24px;
+			}
+		}
+	}
+
 	&--guides {
 		padding: 120px 0;
 		background-color: $whiteBold;

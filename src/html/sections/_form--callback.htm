@@ -20,13 +20,13 @@
 			<div class="field">
 				<label class="field__label" for="user-phone">Телефон <span>*</span></label>
 				<input class="field__input tel" id="user-phone" name="user-phone" type="tel" placeholder="+7(___)___-__-__"
-					required data-validate data-required data-error="Введен не верный телефон" minlength="10">
+					required data-validate data-required data-phone-pattern data-error="Введен не верный телефон" minlength="10">
 			</div>
 
 			<div class="field field--agreement">
-				<div class="field__checkbox checkbox">
+				<div class="field__checkbox checkbox checkbox--accent">
 					<input id="agreement" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="agreement"
-						required>
+						checked required>
 
 					<label for="agreement" class="checkbox__label">
 						<span class="checkbox__text">
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 
-			<button class="form__button button button--l" type="submit">
+			<button class="form__button button" type="submit">
 				перезвоните мне
 			</button>
 		</div>

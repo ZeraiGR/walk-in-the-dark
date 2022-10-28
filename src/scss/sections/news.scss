@@ -443,7 +443,7 @@
 }
 
 .news__author {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -451,12 +451,10 @@
 
   .user__avatar {
     margin: 0;
+    height: 64px;
+    width: 64px;
     border-radius: 50%;
 
-    @media (max-width: em(768)) {
-      height: 64px;
-      width: 64px;
-    }
 
     @media (max-width: $mobileSmall) {
       width: 40px;
@@ -464,8 +462,17 @@
     }
   }
 
+	.user__name {
+		font-family: 'Circe', sans-serif;
+
+		@media (max-width:$mobileSmall){
+			font-size: 16px;
+		}
+	}
+
   .user__location {
     font-size: 14px;
+		font-family: 'Circe', sans-serif;
   }
 
   @media (max-width: em(768)) {

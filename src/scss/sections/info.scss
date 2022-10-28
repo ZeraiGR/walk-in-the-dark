@@ -15,6 +15,14 @@
     }
   }
 
+	&--about {
+		margin-bottom: 80px;
+
+		@media (max-width: $mobileSmall) {
+      margin-bottom: 60px;
+    }
+	}
+
   &--landing {
     margin-bottom: 120px;
 
