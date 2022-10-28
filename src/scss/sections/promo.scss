@@ -139,10 +139,6 @@
         flex-direction: column;
         text-align: center;
       }
-
-      @media (max-width: em(630)) {
-        margin-bottom: 0;
-      }
     }
 
     .promo__title {
@@ -188,17 +184,11 @@
 
       @media (max-width: em(1280)) {
         width: 351px;
-        height: 351px;
+        height: 300px;
       }
 
       @media (max-width: em(768)) {
-        width: 290px;
-        height: 290px;
-      }
-
-      @media (max-width: $mobileSmall) {
-        width: 100%;
-        height: auto;
+        display: none;
       }
     }
 
@@ -965,6 +955,10 @@
     font-weight: 400;
     color: $yellow;
   }
+
+	@media (max-width:$mobile){
+		line-height: 1.2;
+	}
 }
 
 .promo__content {

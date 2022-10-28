@@ -716,6 +716,7 @@
 }
 
 .album__prev {
+	position: absolute;
   top: calc(50% - 120px);
   left: -82px;
 
@@ -737,6 +738,7 @@
 }
 
 .album__next {
+	position: absolute;
   top: calc(50% - 120px);
   right: -82px;
 

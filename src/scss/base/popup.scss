@@ -33,7 +33,7 @@ body.popup-show::after {
     .popup__content {
       max-width: 1200px;
       padding: 64px 115px;
-      background-color: $blackLight;
+      background-color: $whiteBold;
 
       @media (max-width: em(1280)) {
         max-width: 945px;
