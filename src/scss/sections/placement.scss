@@ -17,7 +17,7 @@
   }
 
   &--contacts {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     padding: 20px 0 0;
     background-image: none;
 
@@ -29,14 +29,15 @@
       }
     }
 
-    .placement__info {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+		.placement__content {
+			padding: 110px 50px;
+			background-image: url('@img/decor/map-contacts.jpg');
+			border-radius: 24px;
+		}
 
+    .placement__info {
       @media (max-width: $mobile) {
         max-width: 100%;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 16px;
       }
 
       @media (max-width: $mobileSmall) {
@@ -45,6 +46,11 @@
     }
 
     .placement__title {
+
+			&--main {
+				margin-bottom: 40px;
+			}
+
       @media (max-width: em(1280)) {
         font-size: 24px;
       }
@@ -354,8 +360,28 @@
 .placement__part {
   width: 100%;
   padding: 30px;
-  background-color: $blackLight;
+  background: $accent;
   border-radius: 16px;
+	color: $white;
+
+	.link--mail {
+		padding-left: 34px;
+		font-size: 16px;
+
+		&::before {
+			width: 24px;
+			height: 24px;
+			background-image: url('@img/icons/mail-white.svg');
+		}
+	}
+
+	.socials__link {
+		background-color: $white;
+	}
+
+	.socials__icon {
+		fill: #E9277C;
+	}
 
   @media (max-width: $mobile) {
     padding: 20px 30px;
@@ -378,7 +404,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: $accent;
+  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,10 +424,6 @@
 
 .placement__name {
   font-size: 18px;
-  font-weight: 900;
-  line-height: 1.5;
-  text-transform: uppercase;
-  font-family: 'Mont', sans-serif;
 
   @media (max-width: $mobileSmall) {
     font-size: 14px;

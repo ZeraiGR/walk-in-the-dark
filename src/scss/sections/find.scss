@@ -18,11 +18,12 @@
 
 .find__title {
   margin-bottom: 20px;
+	line-height: 1;
 }
 
 .find__descr {
   margin-bottom: 40px;
-  font-size: 16px;
+  font-size: 18px;
 
   @media (max-width: $mobile) {
     margin-bottom: 30px;
@@ -45,7 +46,7 @@
 .find__item {
   max-width: calc(33% - 20px);
   padding: 32px 24px;
-  background-color: $blackLight;
+  background-color: $whiteBold;
   border-radius: 16px;
 
   @media (max-width: $mobile) {
@@ -62,9 +63,7 @@
 
 .find__heading {
   margin-bottom: 16px;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-family: 'Mont', sans-serif;
+  font-weight: 700;
 }
 
 .find__text {
