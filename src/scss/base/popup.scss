@@ -61,12 +61,12 @@ body.popup-show::after {
   }
 
   &--city {
-    padding: 165px 0 0 0;
+    padding: 148px 0 0 0;
     background-color: transparent;
     transition: none;
 
     .popup__wrapper {
-      background-color: $black;
+      background-color: $white;
     }
 
     .popup__close {
@@ -116,19 +116,19 @@ body.popup-show::after {
       width: 100%;
       padding: 12px 45px 12px 16px;
       font-size: 16px;
-      background-color: $grey;
+      background-color: $whiteBold;
       border: 1px solid transparent;
       border-radius: 2px;
-      color: $whiteBold;
+      color: #a8a8a8;
       outline: transparent;
       transition: border-color 0.3s ease;
 
       &::placeholder {
-        color: $whiteBold;
+        color: #a8a8a8;
       }
 
       &:focus {
-        border-color: $accent;
+        border-color: $pink;
       }
     }
 
