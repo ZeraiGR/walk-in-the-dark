@@ -10,7 +10,7 @@
 
 		.checkbox__input {
 			&:checked + .checkbox__label:before {
-				background-color: #f13780;
+				background-color: $pink;
 				background-image: url('@img/icons/check-icon-white.svg');
 			}
 		}

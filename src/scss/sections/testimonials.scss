@@ -67,7 +67,7 @@
 
   strong {
     font-weight: 400;
-    color: #f13780;
+    color: $pink;
   }
 
   @media (max-width: em(1280)) {
@@ -90,9 +90,13 @@
   padding-left: 53px;
   display: block;
   max-width: max-content;
-  color: $accent;
   font-size: 16px;
   text-decoration: underline;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: $pink;
+	}
 
   &::before {
     position: absolute;
@@ -142,7 +146,7 @@
 .testimonials__slide {
   &.swiper-slide-next {
     .review {
-      background-color: #f13780;
+      background-color: $pink;
       color: $white;
 
 			@media (max-width: em(560)){
@@ -168,7 +172,7 @@
     }
 
     .mini-rating__icon {
-      fill: #f13780;
+      fill: $pink;
 
 			@media (max-width: em(560)){
 				fill: $grey;
@@ -180,7 +184,7 @@
         fill: $white;
 
 				@media (max-width: em(560)){
-					fill: #f13780;
+					fill: $pink;
 				}
       }
     }

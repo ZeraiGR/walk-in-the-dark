@@ -62,6 +62,11 @@
   .header__link {
     display: block;
     font-size: 14px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $pink;
+		}
 
     &--location {
       margin-right: auto;

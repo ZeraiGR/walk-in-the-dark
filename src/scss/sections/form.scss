@@ -44,6 +44,10 @@
 
 		.form__info {
         padding: 60px 80px;
+
+				@media (max-width: em(1280)){
+					padding: 45px 50px;
+				}
 				
 				@media (max-width:$mobileSmall){
 					padding: 30px 20px;

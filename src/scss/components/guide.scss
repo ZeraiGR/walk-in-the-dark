@@ -93,6 +93,15 @@
 .guide__button {
   width: 100%;
 
+	&.active,
+	&:hover {
+		&:hover {
+			background: $white;
+			color: $pink;
+		}
+	}
+
+
   @media (max-width: em(768)) {
     max-width: 283px;
   }

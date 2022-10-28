@@ -124,6 +124,11 @@
 .price__title {
   margin-bottom: 16px;
   text-align: center;
+
+	@media (max-width:$mobileSmall){
+		font-size: 24px;
+		font-weight: 700;
+	}
 }
 
 .price__subtitle {
@@ -297,10 +302,10 @@
     max-width: max-content;
     font-weight: 900;
     font-size: 40px;
-    background-position: top;
-    background-image: url('@img/icons/line.svg');
+    background-position: center;
+    background-image: url('@img/icons/line-white.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     @media (max-width: $mobile) {
       font-size: 36px;
@@ -337,8 +342,8 @@
 		gap: 20px;
 	}
 
-	@media (max-width:$mobile){
-		display: none;
+	@media (max-width:$mobileSmall){
+		gap: 10px;
 	}
 }
 
@@ -347,18 +352,33 @@
 	&:last-child {
 		width: 70px;
 		height: 70px;
+
+		@media (max-width:$mobile){
+			width: 30px;
+			height: 30px;
+		}
 	}
 
 	&:nth-last-child(2),
 	&:nth-child(2) {
 		width: 110px;
 		height: 110px;
+
+		@media (max-width:$mobile){
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 	&:nth-child(3) {
 		margin: 0 5px;
 		width: 150px;
 		height: 150px;
+
+		@media (max-width:$mobile){
+			width: 68px;
+			height: 68px;
+		}
 	}
 
 	img {

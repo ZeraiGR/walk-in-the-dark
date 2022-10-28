@@ -240,8 +240,6 @@
 			background-image: url('@img/decor/bagel-mobile.svg');
 		}
   }
-
-
 }
 
 .subtabs__menu {
@@ -326,6 +324,7 @@
   position: absolute;
   left: 0;
   box-shadow: 3px 3px 10px 5px #1f24480f;
+	outline: transparent;
 
   &::after {
     position: absolute;
