@@ -269,11 +269,19 @@
 			justify-content: space-between;
 			align-items: center;
 			gap: 20px;
+
+			@media (max-width:$mobileSmall){
+				flex-direction: column;
+			}
 		}
 
 		.slider__title {
 			margin: 0;
 			text-align: left;
+
+			@media (max-width:$mobileSmall){
+				text-align: center;
+			}
 		}
 
 		.slider__nav {
