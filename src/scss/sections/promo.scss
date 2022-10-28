@@ -885,6 +885,14 @@
 			gap: 30px;
 		}
 
+		.promo__title {
+			strong {
+				@media (max-width:$mobile){
+					display: inline;
+				}
+			}
+		}
+
 		.promo__info {
 			margin-bottom: 0;
 			max-width: 530px;
@@ -912,8 +920,7 @@
       }
 
 			@media (max-width:$mobile){
-				max-width: 100%;
-        height: auto;
+				display: none;
 			}
 		}
 
