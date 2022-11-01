@@ -12,6 +12,11 @@
 
 			@media (max-width: em(972)){
 				flex-direction: column;
+				gap: 30px;
+			}
+
+			@media (max-width:$mobileSmall){
+				gap: 0;
 			}
 		}
 
@@ -70,6 +75,10 @@
 		.process__title {
 			margin-bottom: 45px;
 			text-align: center;
+
+			@media (max-width:$mobileSmall){
+				margin-bottom: 25px;
+			}
 		}
 	}
 
@@ -477,8 +486,8 @@
 
   @media (max-width: $mobileSmall) {
     margin: 0 auto 60px;
-    padding: 16px 32px;
-    font-size: 12px;
+    padding: 14px 32px;
+    font-size: 14px;
   }
 }
 

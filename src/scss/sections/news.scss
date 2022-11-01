@@ -138,6 +138,7 @@
 	@media (max-width:$mobileSmall){
 		margin-bottom: 24px;
 		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 
@@ -242,6 +243,7 @@
     }
 
     @media (max-width: em(630)) {
+			margin: 25px 0;
       grid-template-columns: 100%;
     }
   }
@@ -347,6 +349,10 @@
         font-size: 16px;
       }
     }
+
+		@media (max-width:$mobileSmall){
+			margin-bottom: 20px;
+		}
   }
 
   img {
@@ -360,7 +366,7 @@
     }
 
     @media (max-width: $mobileSmall) {
-      margin: 30px 0;
+      margin: 20px 0;
       height: 240px;
     }
   }
@@ -518,8 +524,8 @@ ul.news__tags {
   max-width: max-content;
 
   @media (max-width: $mobileSmall) {
-    padding: 16px 32px;
-    font-size: 12px;
+    padding: 14px 32px;
+    font-size: 14px;
   }
 }
 

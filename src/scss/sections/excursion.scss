@@ -102,7 +102,7 @@
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 3px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -247,6 +247,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+
+	@media (max-width:$mobileSmall){
+		gap: 8px;
+	}
 }
 
 .subtabs__btn {
@@ -262,7 +266,8 @@
   }
 
   @media (max-width: $mobileSmall) {
-    font-size: 12px;
+    font-size: 14px;
+		padding: 4px 8px;
   }
 }
 
@@ -360,7 +365,7 @@
 	@media (max-width: em(630)){
 		z-index: 2;
 		padding: 10px;
-		font-size: 12px;
+		font-size: 14px;
 		left: 0;
 		bottom: 20%;
 	}

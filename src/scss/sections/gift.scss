@@ -114,7 +114,7 @@
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 3px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -245,12 +245,12 @@
   max-width: max-content;
 
   @media (max-width: em(630)) {
-    padding: 16px 32px;
+    padding: 14px 32px;
   }
 
   @media (max-width: $mobileSmall) {
-    padding: 16px 24px;
-    font-size: 12px;
+    padding: 14px 24px;
+    font-size: 14px;
     width: 100%;
   }
 }

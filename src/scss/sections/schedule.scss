@@ -239,7 +239,7 @@
   strong {
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
 
     @media (max-width: em(1280)) {
@@ -275,7 +275,7 @@
   @media (max-width: $mobileSmall) {
     max-width: 100%;
     text-align: center;
-    padding: 16px 12px;
-    font-size: 12px;
+    padding: 14px 12px;
+    font-size: 14px;
   }
 }

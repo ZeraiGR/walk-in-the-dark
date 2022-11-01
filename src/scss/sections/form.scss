@@ -197,6 +197,7 @@
 
 .form__img {
   object-fit: cover;
+	width: 100%;
 
   @media (max-width: em(1280)) {
     max-width: 52%;
@@ -273,7 +274,7 @@
 	font-size: 16px;
 
   @media (max-width: $mobileSmall) {
-    padding: 16px 32px;
-    font-size: 12px;
+    padding: 14px 32px;
+    font-size: 14px;
   }
 }
