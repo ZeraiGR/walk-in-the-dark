@@ -281,6 +281,15 @@
 }
 
 .header__menu {
+
+	li {
+		&.active {
+			a {
+				color: $pink;
+			}
+		}
+	}
+
   @media (max-width: em(1230)) {
     flex-direction: column;
     width: 100%;
