@@ -1,0 +1,155 @@
+.announce {
+	padding-bottom: 120px;
+
+	@media (max-width: em(1280)){
+		padding-bottom: 95px;
+	}
+
+	@media (max-width:$mobile){
+		padding-bottom: 80px;
+	}
+
+	@media (max-width:$mobileSmall){
+		padding-bottom: 60px;
+	}
+}
+
+.announce__title {
+	margin-bottom: 40px;
+	text-align: center;
+
+	@media (max-width:$mobile){
+		margin-bottom: 24px;
+	}
+}
+
+.announce__content {
+	display: flex;
+	align-items: flex-start;
+	gap: 50px;
+
+	@media (max-width: em(1280)){
+		gap: 35px;
+	}
+
+	@media (max-width: em(972)){
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.announce__calendar {
+	max-width: 330px;
+	width: 100%;
+}
+
+.announce__info {
+	padding: 40px 30px;
+	width: 100%;
+	border-radius: 16px;
+	background-color: #ffffff;
+	box-shadow: 3px 3px 10px 5px rgb(31 36 72 / 6%);
+
+	@media (max-width: em(768)){
+		padding: 30px 20px;
+	}
+}
+
+.announce__item {
+	margin-bottom: 24px;
+	border-bottom: 1px solid #e4e4e4;
+	padding-bottom: 24px;
+	display: flex;
+	gap: 30px;
+
+	@media (max-width: em(1280)){
+		gap: 20px;
+	}
+
+	@media (max-width: em(525)){
+		flex-direction: column;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.announce__img {
+	max-width: 277px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 16px;
+
+	@media (max-width: em(1280)){
+		max-width: 220px;
+	}
+
+	@media (max-width: em(525)){
+		max-width: 100%;
+	}
+}
+
+.announce__name {
+	margin-bottom: 16px;
+	line-height: 1.5;
+	font-size: 30px;
+
+	@media (max-width: em(1280)){
+		font-size: 20px;
+	}
+}
+
+.announce__tags {
+	margin-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	@media (max-width: em(525)){
+		margin-bottom: 20px;
+	}
+}
+
+.announce__tag {
+	padding: 8px 16px;
+	font-size: 16px;
+	font-family: 'Arial', sans-serif;
+	border-radius: 4px;
+	background-color: #f4f8fb;
+
+	&--time {
+		background-color: $yellow;
+		color: #ffffff;
+	}
+}
+
+.announce__link {
+	margin-top: auto;
+	color: $pink;
+}
+
+.anonounce__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+
+	span {
+		line-height: 1;
+	}
+
+	&::after {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 16px;
+		height: 16px;
+		content: "";
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 12px 12px;
+		background-image: url('@img/icons/angle.svg');
+	}
+}
