@@ -4,44 +4,101 @@
 
 		<h1 class="section__title title">Мероприятия</h1>
 
-		<div class="events__filters">
+		<form class="events__filters">
+			<div class="events__field field">
+				<div class="field__checkbox checkbox">
+					<input id="today" class="checkbox__input" type="checkbox" value="1" name="today" checked>
 
+					<label for="today" class="checkbox__label">
+						<span class="checkbox__text">
+							Сегодня
+						</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="events__field field">
+				<div class="field__checkbox checkbox">
+					<input id="thisweek" class="checkbox__input" type="checkbox" value="1" name="thisweek">
+
+					<label for="thisweek" class="checkbox__label">
+						<span class="checkbox__text">
+							На этой неделе
+						</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="events__field field">
+				<div class="field__checkbox checkbox">
+					<input id="thismonth" class="checkbox__input" type="checkbox" value="1" name="thismonth">
+
+					<label for="thismonth" class="checkbox__label">
+						<span class="checkbox__text">
+							В этом месяце
+						</span>
+					</label>
+				</div>
+			</div>
+
+			<select name="event-type" class="events__select">
+				<option value="" selected>Тип мероприятия</option>
+				<option value="2">Пункт №2</option>
+				<option value="3">Пункт №3</option>
+				<option value="4">Пункт №4</option>
+			</select>
 
 			<div class="events__duration">За период</div>
-		</div>
 
-		<ul class="stocks__list">
+			<div class="events__date">
+				<input id="date-from" class="events__picker datepicker" name="date-from" autocomplete="off" type="text" readonly
+					data-title="Дата от" placeholder="Дата от">
+				<label class="sr-only" for="date-from">Дата от</label>
+			</div>
+
+			<div class="events__date">
+				<input id="date-till" class="events__picker datepicker" name="date-till" autocomplete="off" type="text" readonly
+					data-title="Дата до" placeholder="Дата до">
+				<label class="sr-only" for="date-till">Дата до</label>
+			</div>
+
+			<button class="events__button button" type="submit">
+				найти
+			</button>
+		</form>
+
+		<ul class="events__list">
 			<li>
-				@@include('../components/_stock.htm', {"title": "Скидка -10% на День Рождения и три дня после него", "imgUrl":
-				"img/stock/stock-1.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/1.jpg"})
 			</li>
 
 			<li>
-				@@include('../components/_stock.htm', {"title": "Счастливые часы", "imgUrl":
-				"img/stock/stock-2.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/2.jpg"})
 			</li>
 
 			<li>
-				@@include('../components/_stock.htm', {"title": "Подарок при покупаке от 5 билетов", "imgUrl":
-				"img/stock/stock-3.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/1.jpg"})
 			</li>
 
 			<li>
-				@@include('../components/_stock.htm', {"title": "Скидка -10% на День Рождения и три дня после него", "imgUrl":
-				"img/stock/stock-1.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/2.jpg"})
 			</li>
 
 			<li>
-				@@include('../components/_stock.htm', {"title": "Счастливые часы", "imgUrl":
-				"img/stock/stock-2.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/1.jpg"})
 			</li>
 
 			<li>
-				@@include('../components/_stock.htm', {"title": "Подарок при покупаке от 5 билетов", "imgUrl":
-				"img/stock/stock-3.jpg"})
+				@@include('../components/_event.htm', {"title": "Чайная церемония в полной темноте", "imgUrl":
+				"img/announce/2.jpg"})
 			</li>
 		</ul>
 
-		@@include('../components/_pagination.htm',{})
+		<!-- @@include('../components/_pagination.htm',{}) -->
 	</div>
 </section>

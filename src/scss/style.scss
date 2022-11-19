@@ -159,6 +159,7 @@ body {
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
+@import '~js-datepicker/dist/datepicker.min.css';
 @import 'base';
 
 // Подключение стилей общих элементов проекта
@@ -180,6 +181,7 @@ body {
 @import 'components/calendar';
 @import 'components/timing';
 @import 'components/runline';
+@import 'components/event';
 
 //
 @import 'sections/promo';

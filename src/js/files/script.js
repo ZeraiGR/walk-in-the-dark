@@ -2,8 +2,51 @@
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
 
+import datepicker from 'js-datepicker';
 import "./../libs/jquery.js";
 import "./../libs/jQuery-Marquee.js";
+const datePickers = document.querySelectorAll('.datepicker');
+const pickerIds = [];
+
+if (datePickers) {
+  datePickers.forEach((el) => {
+    pickerIds.push(`#${el.id}`);
+  });
+}
+
+const initPickers = (idArr) => {
+  if (Array.isArray(idArr)) {
+    idArr.forEach((id) => {
+      const picker = datepicker(id, {
+        formatter: (input, date) => {
+          const value = `${date.getDate()} ${date.toLocaleString('ru-RU', {
+            month: 'long',
+          })},  ${date.toLocaleString('ru-RU', { weekday: 'short' })}`;
+          input.value = value;
+        },
+        overlayPlaceholder: new Date().getFullYear().toString(),
+        customMonths: [
+          'Январь',
+          'Февраль',
+          'Март',
+          'Апрель',
+          'Май',
+          'Июнь',
+          'Июль',
+          'Август',
+          'Сентябрь',
+          'Октябрь',
+          'Ноябрь',
+          'Декабрь',
+        ],
+        customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        disabler: (date) => date.getTime() <= new Date(Date.now() - 86400000),
+      });
+    });
+  }
+};
+
+initPickers(pickerIds);
 
 if (document.querySelector('.runline')) {
 	$('.runline').marquee({
@@ -122,7 +165,7 @@ const citySearchHandler = () => {
   }
 };
 
-export const initCalendar = () => {
+const initCalendar = () => {
   let date = new Date();
   let isChanged = false;
   let currentDay = 0;
@@ -284,12 +327,83 @@ const initBooking = () => {
   }
 };
 
+const accordeonManager = () => {
+	function findElements(object, element) {
+			const instance = object;
+			instance.element = element;
+			instance.target =
+					element.nextElementSibling || element.previousElementSibling;
+	}
+
+	function hideElement(object) {
+			const instance = object;
+			const { target } = instance;
+			target.style.height = null;
+			instance.isActive = false;
+	}
+
+	function showElement(object) {
+			const instance = object;
+			const { target, height } = instance;
+			target.style.height = `${height}px`;
+			instance.isActive = true;
+	}
+
+	function changeElementStatus(instance) {
+			if (instance.isActive) {
+					hideElement(instance);
+			} else {
+					showElement(instance);
+			}
+	}
+
+	function measureHeight(object) {
+			const instance = object;
+			instance.height = object.target.firstElementChild.clientHeight;
+	}
+
+	function subscribe(instance) {
+			instance.element.addEventListener('click', (event) => {
+					event.preventDefault();
+					changeElementStatus(instance);
+					instance.element.classList.toggle('active');
+
+					if (instance.element.classList.contains('event__question')) {
+							const button =
+									instance.element.querySelector('.event__trigger');
+							if (instance.element.classList.contains('active')) {
+									button.textContent = 'Скрыть описание';
+							} else {
+									button.textContent = 'Читать полностью';
+							}
+					}
+			});
+			window.addEventListener('resize', () => measureHeight(instance));
+	}
+
+	function accordion(element) {
+			const instance = {};
+
+			function init() {
+					findElements(instance, element);
+					measureHeight(instance);
+					subscribe(instance);
+			}
+
+			init();
+	}
+
+	const elements = [...document.querySelectorAll('.js-accordion')];
+	elements.forEach(accordion);
+};
+
 soundBtnsHandler();
 subtabsHandler();
 placementMarkersHandler();
 citySearchHandler();
 initCalendar();
 initBooking();
+accordeonManager();
 
 document.addEventListener("afterPopupOpen", function (e) {
 	initCalendar();
