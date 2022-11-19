@@ -277,7 +277,7 @@ body.popup-show::after {
     }
   }
 
-	&--booking {
+	&--thanks {
 		.popup__content {
 			padding: 60px 80px;
 			background-color: #ffffff;
@@ -312,6 +312,218 @@ body.popup-show::after {
 			@media (max-width: em(425)){
 				font-size: 16px;
 			}
+		}
+	}
+
+	&--booking {
+		.popup__content {
+			max-width: 1200px;
+			padding: 64px;
+			background-color: #ffffff;
+
+			@media (max-width: em(1280)){
+				padding: 40px 20px;
+			}
+		}
+
+		.popup__inner {
+			margin-bottom: 64px;
+			display: flex;
+			align-items: flex-start;
+			gap: 40px;
+
+			@media (max-width: em(972)){
+				flex-direction: column;
+				align-items: center;
+			}
+
+			@media (max-width: em(768)){
+				margin-bottom: 40px;
+			}
+		}
+
+		.popup__title {
+			margin-bottom: 40px;
+			line-height: 1;
+			text-align: center;
+
+			@media (max-width: em(525)){
+				margin-bottom: 24px;
+			}
+		}
+
+		.popup__subtitle {
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 30px;
+			line-height: 1.2;
+		}
+
+		.popup__calendar {
+			max-width: 330px;
+			width: 100%;
+		}
+
+		.popup__list {
+			margin-bottom: 24px;
+			padding: 32px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 19px 11px;
+			box-shadow: 3px 3px 10px 5px #1f24480f;
+			border-radius: 16px;
+
+			@media (max-width: em(525)){
+				padding: 20px;
+			}
+		}
+
+		.popup__item {
+			input {
+				&:checked + .popup__btn{
+						background-color: #f4b534;
+					}
+			}
+
+			&--busy {
+				.popup__btn {
+					background-color: #e0e0e0;
+					pointer-events: none;
+				}
+			}
+
+			&--yours {
+				.popup__btn {
+					background-color: #f4b534;
+				}
+			}
+		}
+
+		.popup__btn {
+			width: 70px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			font-size: 20px;
+			font-weight: 700;
+			border-radius: 8px;
+			background-color: #badb36;
+			transition: box-shadow 0.3s ease;
+			cursor: pointer;
+
+			@media (max-width: em(525)){
+				width: 65px;
+				height: 55px;
+			}
+
+			&:hover {
+				box-shadow: 3px 3px 10px 5px #1f24480f;
+			}
+		}
+
+		.popup__helps {
+			display: flex;
+			gap: 32px;
+
+			@media (max-width: em(768)){
+				flex-wrap: wrap;
+				gap: 20px 32px;
+			}
+		}
+
+		.popup__help {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+
+			&--free {
+				.popup__box {
+					background-color: #badb36;
+				}
+			}
+
+			&--busy {
+				.popup__box {
+					background-color: #e0e0e0;
+				}
+			}
+
+			&--yours {
+				.popup__box {
+					background-color: #f4b534;
+				}
+			}
+
+			span {
+				text-align: center;
+				font-size: 16px;
+			}
+		}
+
+		.popup__box {
+			font-size: 20px;
+			font-weight: 700;
+			width: 70px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			border-radius: 8px;
+		}
+
+		.popup__fields {
+			margin-bottom: 16px;
+			display: flex;
+			gap: 16px;
+			align-items: flex-start;
+
+			@media (max-width: em(972)){
+				flex-wrap: wrap;
+			}
+		}
+
+		.field {
+			flex-grow: 1;
+
+			@media (max-width: em(972)){
+				max-width: calc(50% - 10px);
+				width: 100%;
+
+				&--agreement {
+					max-width: 100%;
+				}
+			}
+
+			@media (max-width: em(525)){
+				max-width: 100%;
+			}
+		}
+
+		.field__input {
+			padding: 15px 16px;
+			width: 100%;
+			border-radius: 2px;
+			background-color: #f4f8fb;
+		}
+
+		.popup__button {
+			padding: 16px 32px;
+
+			@media (max-width: em(972)){
+				width: calc(50% - 10px);
+			}
+
+			@media (max-width: em(525)){
+				width: 100%;
+			}
+		}
+
+		.field__checkbox {
+			display: flex;
+			justify-content: center;
 		}
 	}
 }

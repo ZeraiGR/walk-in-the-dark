@@ -122,7 +122,7 @@ const citySearchHandler = () => {
   }
 };
 
-const initCalendar = () => {
+export const initCalendar = () => {
   let date = new Date();
   let isChanged = false;
   let currentDay = 0;
@@ -130,17 +130,20 @@ const initCalendar = () => {
   let currentYear = '';
 
   // html elems
-  const daysWrapper = document.querySelector('.calendar__days');
-  const todayBtn = document.querySelector('#today');
-  const resetBtn = document.querySelector('#clear');
-  const dateMonth = document.querySelector('.date__month');
-  const dateYear = document.querySelector('.date__year');
-  const nextMonthBtn = document.querySelector('.calendar__btn--next');
-  const prevMonthBtn = document.querySelector('.calendar__btn--prev');
+	const calendars = document.querySelectorAll('.calendar');
+
+	calendars.forEach(cal => {
+		 const daysWrapper = cal.querySelector('.calendar__days');
+  const todayBtn = cal.querySelector('#today');
+  const resetBtn = cal.querySelector('#clear');
+  const dateMonth = cal.querySelector('.date__month');
+  const dateYear = cal.querySelector('.date__year');
+  const nextMonthBtn = cal.querySelector('.calendar__btn--next');
+  const prevMonthBtn = cal.querySelector('.calendar__btn--prev');
   let months = [];
 
-  if (document.querySelector('.calendar__months')) {
-    months = Array.from(document.querySelector('.calendar__months').children).map(
+  if (cal.querySelector('.calendar__months')) {
+    months = Array.from(cal.querySelector('.calendar__months').children).map(
       (el) => el.textContent,
     );
   }
@@ -194,65 +197,66 @@ const initCalendar = () => {
     }
 
     daysWrapper.innerHTML = days;
-  };
+		};
 
-  if (daysWrapper) {
-    daysWrapper.addEventListener('click', (e) => {
-      const target = e.target;
+		if (daysWrapper) {
+			daysWrapper.addEventListener('click', (e) => {
+				const target = e.target;
 
-      if (target.classList.contains('day')) {
-        isChanged = true;
+				if (target.classList.contains('day')) {
+					isChanged = true;
 
-        const days = document.querySelectorAll('.day');
-        days.forEach((el) => el.classList.remove('today'));
-        target.classList.add('today');
+					const days = cal.querySelectorAll('.day');
+					days.forEach((el) => el.classList.remove('today'));
+					target.classList.add('today');
 
-        currentDay = parseInt(target.textContent);
-        currentMonth = parseInt(months.indexOf(dateMonth.textContent));
-        currentYear = parseInt(dateYear.textContent);
-      }
-    });
-  }
+					currentDay = parseInt(target.textContent);
+					currentMonth = parseInt(months.indexOf(dateMonth.textContent));
+					currentYear = parseInt(dateYear.textContent);
+				}
+			});
+		}
 
-  if (prevMonthBtn) {
-    prevMonthBtn.addEventListener('click', () => {
-      date.setMonth(date.getMonth() - 1);
-      renderCalendar();
-    });
-  }
+		if (prevMonthBtn) {
+			prevMonthBtn.addEventListener('click', () => {
+				date.setMonth(date.getMonth() - 1);
+				renderCalendar();
+			});
+		}
 
-  if (nextMonthBtn) {
-    nextMonthBtn.addEventListener('click', () => {
-      date.setMonth(date.getMonth() + 1);
-      renderCalendar();
-    });
-  }
+		if (nextMonthBtn) {
+			nextMonthBtn.addEventListener('click', () => {
+				date.setMonth(date.getMonth() + 1);
+				renderCalendar();
+			});
+		}
 
-  if (todayBtn) {
-    todayBtn.addEventListener('click', () => {
-      isChanged = false;
+		if (todayBtn) {
+			todayBtn.addEventListener('click', () => {
+				isChanged = false;
 
-      date.setMonth(new Date().getMonth());
-      date.setFullYear(new Date().getFullYear());
-      date.setDate(new Date().getDate());
-      renderCalendar();
-    });
-  }
+				date.setMonth(new Date().getMonth());
+				date.setFullYear(new Date().getFullYear());
+				date.setDate(new Date().getDate());
+				renderCalendar();
+			});
+		}
 
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      isChanged = false;
+		if (resetBtn) {
+			resetBtn.addEventListener('click', () => {
+				isChanged = false;
 
-      date.setMonth(new Date().getMonth());
-      date.setFullYear(new Date().getFullYear());
-      date.setDate(new Date().getDate());
-      renderCalendar();
-    });
-  }
+				date.setMonth(new Date().getMonth());
+				date.setFullYear(new Date().getFullYear());
+				date.setDate(new Date().getDate());
+				renderCalendar();
+			});
+		}
 
-  if (daysWrapper) {
-    renderCalendar();
-  }
+		if (daysWrapper) {
+			renderCalendar();
+		}
+		});
 };
 
 const initBooking = () => {
@@ -286,3 +290,7 @@ placementMarkersHandler();
 citySearchHandler();
 initCalendar();
 initBooking();
+
+document.addEventListener("afterPopupOpen", function (e) {
+	initCalendar();
+});
